@@ -76,3 +76,33 @@ fetch('https://jsonplaceholder.typicode.com/posts')
             container.appendChild(postCard);
         }
     }) 
+
+// Bài 4: Hiển thị dữ liệu từ API (users)
+    // Lấy dữ liệu từ API bằng fetch API
+fetch('https://jsonplaceholder.typicode.com/users')
+    // Chuyển đổi dữ liệu lấy về (response) thành định dạng JSON
+    .then(response => response.json())
+    // Xử lý dữ liệu JSON đã chuyển đổi
+    .then(data => {
+        // Dùng DOM lấy container
+        const container = document.getElementById('userList');
+        // Duyệt dữ liệu lấy về từ API
+        for (let i = 0; i < 20; i++) {
+            const user = data[i];
+            // Tạo thẻ div có class = "user-card" cho mỗi người dùng
+            const userCard = document.createElement('div');
+            userCard.classList.add('user-card');
+            // Gán thông tin người dùng
+            userCard.innerHTML = `
+                <h3>${user.name}</h3>
+                <p>Username: ${user.username}</p>
+                <p>Email: ${user.email}</p>
+                <p>Address: ${user.address.street}, ${user.address.suite}, ${user.address.city}, ${user.address.zipcode}</p>
+                <p>Phone: ${user.phone}</p>
+                <p>Website: ${user.website}</p>
+                <p>Company: ${user.company.name}</p>
+            `
+            // Thêm thẻ div vào container
+            container.appendChild(userCard);
+        }
+    }) 
