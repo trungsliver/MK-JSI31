@@ -3,105 +3,105 @@
         "id": 1,
         "name": "Sofa Văng Scandinavian",
         "price": 12500000,
-        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "image": "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%232563eb'/%3E%3Cstop offset='100%25' stop-color='%230f172a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' rx='36' fill='url(%23g)'/%3E%3Ccircle cx='640' cy='120' r='90' fill='rgba(255,255,255,0.12)'/%3E%3Ccircle cx='150' cy='470' r='140' fill='rgba(255,255,255,0.08)'/%3E%3Ctext x='400' y='245' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='54' font-weight='700' fill='%23ffffff'%3ESofa V%C4%83ng%3C/text%3E%3Ctext x='400' y='320' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='28' fill='%23dbeafe'%3EScandinavian%20Living%3C/text%3E%3Cpath d='M210 390h380c20 0 36 16 36 36v34H174v-34c0-20 16-36 36-36zm40-58c0-24 19-43 43-43h14c24 0 43 19 43 43v32H250v-32zm220 0c0-24 19-43 43-43h14c24 0 43 19 43 43v32H510v-32z' fill='%23ffffff' fill-opacity='.92'/%3E%3C/svg%3E",
         "description": "Ghế sofa văng phong cách Bắc Âu, bọc vải cao cấp, phù hợp phòng khách hiện đại."
     },
     {
         "id": 2,
         "name": "Bàn Trà Gỗ Sồi",
         "price": 3500000,
-        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "image": "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%2316a34a'/%3E%3Cstop offset='100%25' stop-color='%230f172a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' rx='36' fill='url(%23g)'/%3E%3Ccircle cx='620' cy='120' r='96' fill='rgba(255,255,255,0.12)'/%3E%3Crect x='190' y='320' width='420' height='34' rx='17' fill='%23fff7ed' fill-opacity='.9'/%3E%3Crect x='245' y='354' width='26' height='118' rx='13' fill='%23fff7ed' fill-opacity='.9'/%3E%3Crect x='529' y='354' width='26' height='118' rx='13' fill='%23fff7ed' fill-opacity='.9'/%3E%3Crect x='310' y='270' width='180' height='86' rx='22' fill='%23ffffff' fill-opacity='.84'/%3E%3Ctext x='400' y='210' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='52' font-weight='700' fill='%23ffffff'%3EB%C3%A0n Tr%C3%A0%3C/text%3E%3Ctext x='400' y='500' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='28' fill='%23dcfce7'%3EG%E1%BB%97%20S%E1%BB%91i%3C/text%3E%3C/svg%3E",
         "description": "Bàn trà gỗ sồi tự nhiên với thiết kế tối giản, bền đẹp và sang trọng."
     },
     {
         "id": 3,
         "name": "Kệ Tivi Hiện Đại",
         "price": 4900000,
-        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "image": "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%230ea5e9'/%3E%3Cstop offset='100%25' stop-color='%231e293b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' rx='36' fill='url(%23g)'/%3E%3Crect x='170' y='300' width='460' height='180' rx='24' fill='rgba(255,255,255,0.12)'/%3E%3Crect x='216' y='340' width='368' height='86' rx='18' fill='%23e2e8f0' fill-opacity='.9'/%3E%3Crect x='250' y='372' width='90' height='18' rx='9' fill='%231e293b' fill-opacity='.28'/%3E%3Crect x='360' y='372' width='90' height='18' rx='9' fill='%231e293b' fill-opacity='.28'/%3E%3Crect x='470' y='372' width='90' height='18' rx='9' fill='%231e293b' fill-opacity='.28'/%3E%3Ctext x='400' y='210' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='52' font-weight='700' fill='%23ffffff'%3EK%E1%BB%87%20Tivi%3C/text%3E%3Ctext x='400' y='500' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='28' fill='%23e0f2fe'%3EHi%E1%BB%87n%20%C4%90%E1%BA%A1i%3C/text%3E%3C/svg%3E",
         "description": "Kệ tivi nhiều ngăn lưu trữ, phù hợp căn hộ và nhà phố hiện đại."
     },
     {
         "id": 4,
         "name": "Ghế Thư Giãn Recliner",
         "price": 8900000,
-        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "image": "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23f97316'/%3E%3Cstop offset='100%25' stop-color='%23374151'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' rx='36' fill='url(%23g)'/%3E%3Cpath d='M250 372c0-68 54-122 122-122h56c68 0 122 54 122 122v54H250v-54z' fill='rgba(255,255,255,0.14)'/%3E%3Cpath d='M286 356c0-42 34-76 76-76h76c42 0 76 34 76 76v48H286v-48z' fill='%23fff7ed' fill-opacity='.92'/%3E%3Cpath d='M314 404h170v52H314z' fill='%23fff7ed' fill-opacity='.92'/%3E%3Ctext x='400' y='210' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='52' font-weight='700' fill='%23ffffff'%3EGh%E1%BA%BF%20Th%C6%B0%20Gi%C3%A3n%3C/text%3E%3Ctext x='400' y='500' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='28' fill='%23ffedd5'%3ERecliner%20Comfort%3C/text%3E%3C/svg%3E",
         "description": "Ghế thư giãn có thể ngả lưng, mang lại sự thoải mái tối đa khi nghỉ ngơi."
     },
     {
         "id": 5,
         "name": "Bàn Ăn 6 Ghế Gỗ Tự Nhiên",
         "price": 15900000,
-        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "image": "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%238b5cf6'/%3E%3Cstop offset='100%25' stop-color='%23374151'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' rx='36' fill='url(%23g)'/%3E%3Crect x='175' y='300' width='450' height='32' rx='16' fill='%23ffffff' fill-opacity='.88'/%3E%3Crect x='205' y='332' width='28' height='126' rx='14' fill='%23ffffff' fill-opacity='.88'/%3E%3Crect x='567' y='332' width='28' height='126' rx='14' fill='%23ffffff' fill-opacity='.88'/%3E%3Crect x='250' y='242' width='300' height='84' rx='22' fill='%23ede9fe' fill-opacity='.94'/%3E%3Ctext x='400' y='205' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='50' font-weight='700' fill='%23ffffff'%3EB%C3%A0n%20%C4%82n%206%20Gh%E1%BA%BF%3C/text%3E%3Ctext x='400' y='500' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='28' fill='%23e9d5ff'%3EG%E1%BB%97%20T%E1%BB%B1%20Nhi%C3%AAn%3C/text%3E%3C/svg%3E",
         "description": "Bộ bàn ăn 6 ghế bằng gỗ tự nhiên, phù hợp cho gia đình từ 4-6 người."
     },
     {
         "id": 6,
         "name": "Ghế Ăn Bọc Nệm",
         "price": 1800000,
-        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "image": "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%2310b981'/%3E%3Cstop offset='100%25' stop-color='%230f172a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' rx='36' fill='url(%23g)'/%3E%3Cpath d='M290 250c0-34 28-62 62-62s62 28 62 62v112h-124V250z' fill='rgba(255,255,255,0.12)'/%3E%3Cpath d='M290 362h124v106H290z' fill='%23ecfeff' fill-opacity='.92'/%3E%3Cpath d='M252 468h28v44h-28zM520 468h28v44h-28z' fill='%23ecfeff' fill-opacity='.92'/%3E%3Cpath d='M274 420h252v24H274z' fill='%23ecfeff' fill-opacity='.92'/%3E%3Ctext x='400' y='205' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='50' font-weight='700' fill='%23ffffff'%3EGh%E1%BA%BF%20%C4%82n%3C/text%3E%3Ctext x='400' y='500' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='28' fill='%23d1fae5'%3EB%E1%BB%8Dc%20N%E1%BB%87m%3C/text%3E%3C/svg%3E",
         "description": "Ghế ăn bọc nệm êm ái với khung gỗ chắc chắn."
     },
     {
         "id": 7,
         "name": "Giường Ngủ Queen Size",
         "price": 11900000,
-        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "image": "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23ec4899'/%3E%3Cstop offset='100%25' stop-color='%230f172a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' rx='36' fill='url(%23g)'/%3E%3Crect x='160' y='290' width='480' height='140' rx='26' fill='%23ffffff' fill-opacity='.12'/%3E%3Crect x='204' y='320' width='392' height='80' rx='20' fill='%23ffe4e6' fill-opacity='.94'/%3E%3Crect x='204' y='270' width='112' height='58' rx='18' fill='%23ffe4e6' fill-opacity='.94'/%3E%3Ctext x='400' y='205' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='52' font-weight='700' fill='%23ffffff'%3EGi%C6%B0%E1%BB%9Dng%20Ng%E1%BB%A7%3C/text%3E%3Ctext x='400' y='500' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='28' fill='%23fce7f3'%3EQueen%20Size%3C/text%3E%3C/svg%3E",
         "description": "Giường ngủ kích thước Queen với đầu giường bọc nệm sang trọng."
     },
     {
         "id": 8,
         "name": "Tủ Quần Áo 4 Cánh",
         "price": 9800000,
-        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "image": "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%2306b6d4'/%3E%3Cstop offset='100%25' stop-color='%231e293b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' rx='36' fill='url(%23g)'/%3E%3Crect x='252' y='190' width='296' height='300' rx='26' fill='rgba(255,255,255,0.15)'/%3E%3Crect x='290' y='228' width='220' height='224' rx='20' fill='%23ecfeff' fill-opacity='.92'/%3E%3Cline x1='400' y1='228' x2='400' y2='452' stroke='%231e293b' stroke-opacity='.16' stroke-width='8'/%3E%3Ccircle cx='384' cy='340' r='10' fill='%231e293b' fill-opacity='.3'/%3E%3Ccircle cx='416' cy='340' r='10' fill='%231e293b' fill-opacity='.3'/%3E%3Ctext x='400' y='150' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='50' font-weight='700' fill='%23ffffff'%3ET%E1%BB%A7%20Qu%E1%BA%A7n%20%C3%81o%3C/text%3E%3Ctext x='400' y='535' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='28' fill='%23cffafe'%3E4%20C%C3%A1nh%3C/text%3E%3C/svg%3E",
         "description": "Tủ quần áo rộng rãi với nhiều ngăn chứa đồ tiện lợi."
     },
     {
         "id": 9,
         "name": "Bàn Làm Việc Minimalist",
         "price": 3200000,
-        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "image": "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23f59e0b'/%3E%3Cstop offset='100%25' stop-color='%23374151'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' rx='36' fill='url(%23g)'/%3E%3Crect x='178' y='320' width='444' height='34' rx='17' fill='%23fff7ed' fill-opacity='.9'/%3E%3Crect x='228' y='354' width='24' height='120' rx='12' fill='%23fff7ed' fill-opacity='.9'/%3E%3Crect x='548' y='354' width='24' height='120' rx='12' fill='%23fff7ed' fill-opacity='.9'/%3E%3Crect x='312' y='238' width='176' height='82' rx='20' fill='%23ffffff' fill-opacity='.84'/%3E%3Ctext x='400' y='205' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='50' font-weight='700' fill='%23ffffff'%3EB%C3%A0n%20L%C3%A0m%20Vi%E1%BB%87c%3C/text%3E%3Ctext x='400' y='500' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='28' fill='%23ffedd5'%3EMinimalist%3C/text%3E%3C/svg%3E",
         "description": "Bàn làm việc thiết kế tối giản, phù hợp không gian học tập và làm việc."
     },
     {
         "id": 10,
         "name": "Ghế Công Thái Học",
         "price": 4500000,
-        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "image": "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%239933ea'/%3E%3Cstop offset='100%25' stop-color='%231e293b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' rx='36' fill='url(%23g)'/%3E%3Cpath d='M312 240c0-54 38-92 88-92s88 38 88 92v72H312v-72z' fill='rgba(255,255,255,0.14)'/%3E%3Cpath d='M282 320c0-34 28-62 62-62h112c34 0 62 28 62 62v86H282v-86z' fill='%23f5f3ff' fill-opacity='.92'/%3E%3Crect x='306' y='408' width='34' height='66' rx='17' fill='%23f5f3ff' fill-opacity='.92'/%3E%3Crect x='460' y='408' width='34' height='66' rx='17' fill='%23f5f3ff' fill-opacity='.92'/%3E%3Ctext x='400' y='205' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='50' font-weight='700' fill='%23ffffff'%3EGh%E1%BA%BF%20C%C3%B4ng%20Th%C3%A1i%20H%E1%BB%8Dc%3C/text%3E%3Ctext x='400' y='500' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='28' fill='%23e9d5ff'%3EErgonomic%20Support%3C/text%3E%3C/svg%3E",
         "description": "Ghế công thái học hỗ trợ cột sống, phù hợp làm việc lâu dài."
     },
     {
         "id": 11,
         "name": "Kệ Sách Gỗ Công Nghiệp",
         "price": 2700000,
-        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "image": "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%236b7280'/%3E%3Cstop offset='100%25' stop-color='%231f2937'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' rx='36' fill='url(%23g)'/%3E%3Crect x='242' y='154' width='316' height='352' rx='22' fill='rgba(255,255,255,0.12)'/%3E%3Crect x='276' y='188' width='248' height='284' rx='18' fill='%23f8fafc' fill-opacity='.92'/%3E%3Cline x1='400' y1='188' x2='400' y2='472' stroke='%231f2937' stroke-opacity='.14' stroke-width='7'/%3E%3Cline x1='276' y1='282' x2='524' y2='282' stroke='%231f2937' stroke-opacity='.14' stroke-width='7'/%3E%3Cline x1='276' y1='376' x2='524' y2='376' stroke='%231f2937' stroke-opacity='.14' stroke-width='7'/%3E%3Ctext x='400' y='130' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='48' font-weight='700' fill='%23ffffff'%3EK%E1%BB%87%20S%C3%A1ch%3C/text%3E%3Ctext x='400' y='535' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='28' fill='%23e5e7eb'%3EG%E1%BB%97%20C%C3%B4ng%20Nghi%E1%BB%87p%3C/text%3E%3C/svg%3E",
         "description": "Kệ sách nhiều tầng với thiết kế hiện đại và tiết kiệm diện tích."
     },
     {
         "id": 12,
         "name": "Tủ Đầu Giường",
         "price": 1450000,
-        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "image": "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23a855f7'/%3E%3Cstop offset='100%25' stop-color='%230f172a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' rx='36' fill='url(%23g)'/%3E%3Crect x='286' y='204' width='228' height='244' rx='24' fill='rgba(255,255,255,0.14)'/%3E%3Crect x='320' y='238' width='160' height='172' rx='18' fill='%23f5f3ff' fill-opacity='.92'/%3E%3Ccircle cx='400' cy='322' r='14' fill='%231e293b' fill-opacity='.22'/%3E%3Ctext x='400' y='170' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='50' font-weight='700' fill='%23ffffff'%3ET%E1%BB%A7%20%C4%90%E1%BA%A7u%20Gi%C6%B0%E1%BB%9Dng%3C/text%3E%3Ctext x='400' y='500' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='28' fill='%23ede9fe'%3ENightstand%3C/text%3E%3C/svg%3E",
         "description": "Tủ đầu giường nhỏ gọn với ngăn kéo tiện lợi."
     },
     {
         "id": 13,
         "name": "Đèn Sàn Trang Trí",
         "price": 2100000,
-        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "image": "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23facc15'/%3E%3Cstop offset='100%25' stop-color='%23374151'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' rx='36' fill='url(%23g)'/%3E%3Ccircle cx='400' cy='188' r='74' fill='%23fff7ed' fill-opacity='.92'/%3E%3Crect x='394' y='250' width='12' height='166' rx='6' fill='%23fff7ed' fill-opacity='.92'/%3E%3Crect x='350' y='414' width='100' height='18' rx='9' fill='%23fff7ed' fill-opacity='.92'/%3E%3Cpath d='M350 250h100L400 192z' fill='rgba(255,255,255,0.12)'/%3E%3Ctext x='400' y='500' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='28' fill='%23fef3c7'%3E%C4%90%C3%A8n%20S%C3%A0n%20Trang%20Tr%C3%AD%3C/text%3E%3C/svg%3E",
         "description": "Đèn sàn phong cách hiện đại, tạo điểm nhấn cho phòng khách."
     },
     {
         "id": 14,
         "name": "Tủ Giày Thông Minh",
         "price": 3900000,
-        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "image": "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%230f766e'/%3E%3Cstop offset='100%25' stop-color='%231e293b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' rx='36' fill='url(%23g)'/%3E%3Crect x='250' y='182' width='300' height='300' rx='26' fill='rgba(255,255,255,0.13)'/%3E%3Crect x='286' y='218' width='228' height='228' rx='20' fill='%23f0fdfa' fill-opacity='.92'/%3E%3Cpath d='M286 294h228' stroke='%231e293b' stroke-opacity='.14' stroke-width='7'/%3E%3Cpath d='M286 370h228' stroke='%231e293b' stroke-opacity='.14' stroke-width='7'/%3E%3Ctext x='400' y='150' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='50' font-weight='700' fill='%23ffffff'%3ET%E1%BB%A7%20Gi%C3%A0y%3C/text%3E%3Ctext x='400' y='535' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='28' fill='%23ccfbf1'%3ETh%C3%B4ng%20Minh%3C/text%3E%3C/svg%3E",
         "description": "Tủ giày thiết kế thông minh, tối ưu không gian lưu trữ."
     },
     {
         "id": 15,
         "name": "Bàn Trang Điểm Hiện Đại",
         "price": 5200000,
-        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "image": "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23fb7185'/%3E%3Cstop offset='100%25' stop-color='%232563eb'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' rx='36' fill='url(%23g)'/%3E%3Crect x='270' y='208' width='260' height='220' rx='22' fill='rgba(255,255,255,0.13)'/%3E%3Cellipse cx='400' cy='316' rx='64' ry='78' fill='%23ffffff' fill-opacity='.92'/%3E%3Crect x='320' y='354' width='160' height='22' rx='11' fill='%23ffffff' fill-opacity='.92'/%3E%3Crect x='340' y='376' width='120' height='54' rx='12' fill='%23ffffff' fill-opacity='.92'/%3E%3Ctext x='400' y='155' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='48' font-weight='700' fill='%23ffffff'%3EB%C3%A0n%20Trang%20%C4%90i%E1%BB%83m%3C/text%3E%3Ctext x='400' y='500' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='28' fill='%23ffe4e6'%3EHi%E1%BB%87n%20%C4%90%E1%BA%A1i%3C/text%3E%3C/svg%3E",
         "description": "Bàn trang điểm tích hợp gương và ngăn kéo tiện dụng."
     }
 ]
