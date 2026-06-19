@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "name": "Sofa Văng Scandinavian",
+        "price": 12500000,
+        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "description": "Ghế sofa văng phong cách Bắc Âu, bọc vải cao cấp, phù hợp phòng khách hiện đại."
+    },
+    {
+        "id": 2,
+        "name": "Bàn Trà Gỗ Sồi",
+        "price": 3500000,
+        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "description": "Bàn trà gỗ sồi tự nhiên với thiết kế tối giản, bền đẹp và sang trọng."
+    },
+    {
+        "id": 3,
+        "name": "Kệ Tivi Hiện Đại",
+        "price": 4900000,
+        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "description": "Kệ tivi nhiều ngăn lưu trữ, phù hợp căn hộ và nhà phố hiện đại."
+    },
+    {
+        "id": 4,
+        "name": "Ghế Thư Giãn Recliner",
+        "price": 8900000,
+        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "description": "Ghế thư giãn có thể ngả lưng, mang lại sự thoải mái tối đa khi nghỉ ngơi."
+    },
+    {
+        "id": 5,
+        "name": "Bàn Ăn 6 Ghế Gỗ Tự Nhiên",
+        "price": 15900000,
+        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "description": "Bộ bàn ăn 6 ghế bằng gỗ tự nhiên, phù hợp cho gia đình từ 4-6 người."
+    },
+    {
+        "id": 6,
+        "name": "Ghế Ăn Bọc Nệm",
+        "price": 1800000,
+        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "description": "Ghế ăn bọc nệm êm ái với khung gỗ chắc chắn."
+    },
+    {
+        "id": 7,
+        "name": "Giường Ngủ Queen Size",
+        "price": 11900000,
+        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "description": "Giường ngủ kích thước Queen với đầu giường bọc nệm sang trọng."
+    },
+    {
+        "id": 8,
+        "name": "Tủ Quần Áo 4 Cánh",
+        "price": 9800000,
+        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "description": "Tủ quần áo rộng rãi với nhiều ngăn chứa đồ tiện lợi."
+    },
+    {
+        "id": 9,
+        "name": "Bàn Làm Việc Minimalist",
+        "price": 3200000,
+        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "description": "Bàn làm việc thiết kế tối giản, phù hợp không gian học tập và làm việc."
+    },
+    {
+        "id": 10,
+        "name": "Ghế Công Thái Học",
+        "price": 4500000,
+        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "description": "Ghế công thái học hỗ trợ cột sống, phù hợp làm việc lâu dài."
+    },
+    {
+        "id": 11,
+        "name": "Kệ Sách Gỗ Công Nghiệp",
+        "price": 2700000,
+        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "description": "Kệ sách nhiều tầng với thiết kế hiện đại và tiết kiệm diện tích."
+    },
+    {
+        "id": 12,
+        "name": "Tủ Đầu Giường",
+        "price": 1450000,
+        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "description": "Tủ đầu giường nhỏ gọn với ngăn kéo tiện lợi."
+    },
+    {
+        "id": 13,
+        "name": "Đèn Sàn Trang Trí",
+        "price": 2100000,
+        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "description": "Đèn sàn phong cách hiện đại, tạo điểm nhấn cho phòng khách."
+    },
+    {
+        "id": 14,
+        "name": "Tủ Giày Thông Minh",
+        "price": 3900000,
+        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "description": "Tủ giày thiết kế thông minh, tối ưu không gian lưu trữ."
+    },
+    {
+        "id": 15,
+        "name": "Bàn Trang Điểm Hiện Đại",
+        "price": 5200000,
+        "image": "https://erado.vn/img/i/sofa-goc-thong-minh-mo-rong-cho-ngoi-nv21-25315.jpg",
+        "description": "Bàn trang điểm tích hợp gương và ngăn kéo tiện dụng."
+    }
+]
