@@ -75,4 +75,4 @@ fetch('https://jsonplaceholder.typicode.com/posts')
             // Thêm thẻ div vào container
             container.appendChild(postCard);
         }
-    })
+    }) 
