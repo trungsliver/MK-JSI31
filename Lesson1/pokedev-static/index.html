@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokemonDev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/icon-pages.png" />
+</head>
+<body>
+    <div id="pokedex">
+        <div id="top">
+            <div id="top-bar">
+                <input id="search" type="text" placeholder="pokemon name"/>
+                <span id="id">#000</span>
+            </div>
+            <div id="poke-image-placeholder">
+                <img src="./images/ballpixel.png" id="pokemon-image" alt="pokemon-image" />
+            </div>
+        </div>
+        <div id="data">
+            <h4 id="base-stats"style="color: rgb(116, 203, 72);">Base Stats</h4>
+            <div id="info">
+                <span style="background-color: rgb(116, 203, 72);" class="type">
+                    Name: 
+                </span>
+                <span style="background-color: rgb(164,  62, 158);" class="type">
+                    Type: 
+                </span>   
+                <span style="background-color: rgb(45, 51, 107);" class="type">
+                    Height: 
+                </span> 
+                <span style="background-color: rgb(255, 235, 0);" class="type">
+                    Weight: 
+                </span>   
+            </div>
+            <h4 style="color: rgb(116, 203, 72);">Bio</h4>
+            <div id="ability">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui impedit voluptate dolorum cum alias. Ratione explicabo tempora repellat repudiandae quasi, pariatur sed neque aut labore, voluptatibus saepe, quod eos iure.</p>
+            </div>  
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script> <!-- Bắt buộc phải để dòng này lên trên dòng truy vấn app.js -->
+    <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url("./images/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#pokedex {
+    width: 50%;
+    background-color: rgb(116, 203,  72);
+    border-radius: 8px;
+    padding: 0.3rem;
+    transition: background-color 0.5s ease-in-out;
+}
+
+#top {
+    height: 40%;
+    padding: 0.5rem;
+    background: url('./images/pokeball.png');
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+#top-bar {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 0 1.2rem;
+}
+
+#search {
+    color: rgb(0, 0, 0);
+    background: white;
+    border-radius: 15px;
+    border: 2px solid #ffffff;
+    padding: 4px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 60%;
+    outline: none;
+    text-transform: capitalize;
+}
+
+#search:focus {
+    outline: none;
+}
+
+#poke-image-placeholder {
+    display: flex;
+    justify-content: center;
+}
+
+#pokemon-image {
+    width: 180px;
+    height: 180px;
+    transform: translateY(3.5rem);
+}
+
+#data {
+    background-color: white;
+    border-radius: 8px;
+    padding-top: 3.2rem;
+}
+
+#info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.type {
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+#data h4 {
+    text-align: center;
+    padding: 6px;
+}
+
+#ability p{
+    padding: 0 16px 16px;
+    text-align: center;
+}
