@@ -1,0 +1,7 @@
+/* Bài 1: Darkmode / Lightmode */
+.darkmode {
+    /* Màu nền */
+    background-color: black;
+    /* Màu chữ */
+    color: white;
+}
