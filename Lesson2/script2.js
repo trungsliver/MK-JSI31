@@ -49,17 +49,17 @@ console.log(str1);
 
     // Array / List method (advanced)
         // map: duyêt & biến đổi nhiều phần tử
-const students = ["Quang Huy", 'Xuân Tú', 'Khải Hoàng', 'Đình Hải'];
+const students1 = ["Quang Huy", 'Xuân Tú', 'Khải Hoàng', 'Đình Hải'];
 
             // Cách cũ:
 const students2 = [];
-students.forEach((student, index) => {
+students1.forEach((student, index) => {
     students2.push(`${student} - JSI31`);
 })
 console.log('students2: ', students2);
 
             // Cách mới: dùng map
-const students3 = students.map((student, index) => `${student} - JSI31`);
+const students3 = students1.map((student, index) => `${student} - JSI31`);
 console.log('students3: ', students3);
 
         // filter(): lọc theo điều kiện
