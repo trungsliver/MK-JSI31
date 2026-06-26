@@ -227,3 +227,61 @@ const students = [
     },
   },
 ];
+
+
+// 1. Lọc danh sách 3 học sinh đạt điểm TBHK cao nhất
+    // Dùng map để tạo ra danh sách học sinh với điểm TBHK
+const top3Students = students.map((student) => {
+  let totalScore = 0;
+  const subjects = Object.values(student.scores);
+
+  // Tính tổng điểm cho từng môn
+  for (let i = 0; i < subjects.length; i++) {
+    totalScore += subjects[i].score;
+  }
+
+  return {
+    name: student.name,
+    average: totalScore / subjects.length, // Tính điểm trung bình
+  };
+});
+
+    // Sắp xếp học sinh theo điểm trung bình giảm dần và lấy 3 học sinh đầu tiên
+top3Students.sort((a, b) => b.average - a.average);
+const top3 = top3Students.slice(0, 3);
+    // Hiển thi Kết quả
+console.log("3 học sinh đạt điểm TBHK cao nhất:", top3);
+
+// 2. Tìm học sinh đạt điểm TBHK thấp nhất
+lowest_stu = top3Students[students.length - 1];  // Phần tử cuối cùng của danh sách
+console.log("Học sinh đạt điểm TBHK thấp nhất:", lowest_stu)
+
+// 3. Tính điểm trung bình HK của toàn bộ 10 bạn học sinh trong lớp.
+totalAvg = 0;
+    // Tính tổng điểm TBHK của toàn bộ hsinh trong dsach
+for (let i=0; i < top3Students.length; i++){
+    totalAvg += top3Students[i].average
+}
+// Lấy điểm TBHK trung bình
+avg = totalAvg / top3Students.length
+console.log("Điểm TBHK trung bình của toàn bộ học sinh:", avg);
+
+// 4. In ra tên các học sinh đạt danh hiệu học lực: Giỏi - Khá - Trung Bình
+const hocLuc = top3Students.map((student) =>{
+    if (student.average >= 8){
+        evaluation = 'Giỏi';
+    } else if (student.average >= 6.6){
+        evaluation = 'Khá';
+    } else {
+        evaluation = 'Trung Bình';
+    }
+    // Trả về tên học sinh và danh hiệu học lực
+    return { name: student.name, evaluation };
+})  
+console.log("Danh sách học sinh đạt danh hiệu học lực:", hocLuc)
+
+
+// 5. Lọc danh sách học sinh có số điểm TBHK >= 7 (chỉ cần hiển thị tên).
+    // Dùng filer()
+const stuAbove7 = top3Students.filter(stu => stu.average >= 7);
+console.log("Danh sách học sinh có điểm TBHK >= 7:", stuAbove7);
