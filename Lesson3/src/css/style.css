@@ -1,0 +1,94 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background: #f4f7fb;
+	color: #1f2937;
+}
+
+.container {
+	max-width: 720px;
+	margin: 32px auto;
+	padding: 0 16px;
+}
+
+h1 {
+	margin-bottom: 6px;
+}
+
+.subtitle {
+	margin-top: 0;
+	color: #4b5563;
+}
+
+.card {
+	background: #ffffff;
+	border: 1px solid #dbe2ea;
+	border-radius: 12px;
+	padding: 16px;
+	margin-top: 16px;
+}
+
+.row {
+	display: flex;
+	gap: 8px;
+	margin-top: 8px;
+}
+
+input {
+	flex: 1;
+	border: 1px solid #cbd5e1;
+	border-radius: 8px;
+	padding: 10px;
+	font-size: 15px;
+}
+
+button {
+	border: none;
+	border-radius: 8px;
+	padding: 10px 14px;
+	background: #0f766e;
+	color: #fff;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #0d5f59;
+}
+
+#notes-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.note-item {
+	display: flex;
+	justify-content: space-between;
+	gap: 12px;
+	align-items: center;
+	padding: 10px;
+	border-bottom: 1px solid #e5e7eb;
+}
+
+.note-item:last-child {
+	border-bottom: none;
+}
+
+#empty-state {
+	color: #6b7280;
+	margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+	.row {
+		flex-direction: column;
+	}
+
+	button {
+		width: 100%;
+	}
+}

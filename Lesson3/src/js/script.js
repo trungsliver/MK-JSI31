@@ -26,3 +26,8 @@ import {
     where
 }
     from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+
+// Khởi tạo firebase
+const app = initializeApp(firebaseConfig);
+// test app
+console.log(app.name); // "[DEFAULT]"
