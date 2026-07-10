@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3</title>
+    <!-- link css -->
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+    <main class="auth-container">
+
+        <!-- LOGIN -->
+        <section id="login-section" class="card">
+            <h2>Login</h2>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="login-email">
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="login-password">
+            </div>
+
+            <p id="login-message" class="message"></p>
+
+            <button id="login-btn" class="btn">
+                Login
+            </button>
+
+            <button id="google-login-btn" class="btn google-btn" type="button">
+                Continue with Google
+            </button>
+
+            <p class="switch-text">
+                Don't have an account?
+                <button id="show-register-btn" class="link-btn">
+                    Register
+                </button>
+            </p>
+        </section>
+
+        <!-- REGISTER -->
+        <section id="register-section" class="card hidden">
+            <h2>Register</h2>
+
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" id="register-username">
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="register-email">
+            </div>
+
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="text" id="register-phone">
+            </div>
+
+            <div class="form-group">
+                <label>Date of birth</label>
+                <input type="date" id="register-dob">
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="register-password">
+            </div>
+
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" id="register-confirm-password">
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="agree">
+                <label for="agree">
+                    I agree with Terms and Conditions
+                </label>
+            </div>
+
+            <p id="register-message" class="message"></p>
+
+            <button id="register-btn" class="btn">
+                Register
+            </button>
+
+            <p class="switch-text">
+                Already have an account?
+                <button id="show-login-btn" class="link-btn">
+                    Login
+                </button>
+            </p>
+        </section>
+
+        <!-- PROFILE -->
+        <section id="profile-section" class="card hidden">
+            <h2>Account Information</h2>
+
+            <div class="profile-item">
+                <strong>Username:</strong>
+                <span id="profile-username"></span>
+            </div>
+
+            <div class="profile-item">
+                <strong>Email:</strong>
+                <span id="profile-email"></span>
+            </div>
+
+            <div class="profile-item">
+                <strong>Phone:</strong>
+                <span id="profile-phone"></span>
+            </div>
+
+            <div class="profile-item">
+                <strong>Date of Birth:</strong>
+                <span id="profile-dob"></span>
+            </div>
+
+            <div class="profile-item">
+                <strong>Last Login:</strong>
+                <span id="profile-last-login"></span>
+            </div>
+
+            <button id="logout-btn" class="btn danger">
+                Logout
+            </button>
+        </section>
+
+    </main>
+
+
+
+    <!-- Link js -->
+    <script type="module" src="./src/js/script.js"></script>
+</body>
+
+</html>
