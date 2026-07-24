@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 6</title>
+    <!-- Liên kết css -->
+     <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+     <header>
+        <h1>FireGram</h1>
+        <div id="user-section" class="hidden">
+            <span id="user-email"></span>
+            <button id="logout-button">Đăng xuất</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Auth Container -->
+        <div id="auth-container">
+            <!-- Login Form -->
+            <div class="form-container" id="loginForm">
+                <h2>Đăng nhập</h2>
+                <form id="login">
+                    <input type="email" id="loginEmail" placeholder="Email" required autocomplete="email">
+                    <input type="password" id="loginPassword" placeholder="Mật khẩu" required
+                        autocomplete="current-password">
+                    <button type="submit">Đăng nhập</button>
+                </form>
+                <p>Chưa có tài khoản? <a href="#" id="showRegister">Đăng ký</a></p>
+            </div>
+
+            <!-- Register Form -->
+            <div class="form-container" id="registerForm" style="display: none;">
+                <h2>Đăng ký</h2>
+                <form id="register">
+                    <input type="email" id="registerEmail" placeholder="Email" required autocomplete="email">
+                    <input type="password" id="registerPassword" placeholder="Mật khẩu" required
+                        autocomplete="new-password">
+                    <button type="submit">Đăng ký</button>
+                </form>
+                <p>Đã có tài khoản? <a href="#" id="showLogin">Đăng nhập</a></p>
+            </div>
+        </div>
+
+        <!-- App Container -->
+        <div id="app-container" class="hidden">
+            <!-- Post Creator -->
+            <div id="post-creator">
+                <h3>Tạo bài đăng mới</h3>
+                <form id="post-form">
+                    <input type="file" id="image-input" accept="image/*" required>
+                    <textarea id="caption-input" placeholder="Viết chú thích cho ảnh của bạn..." required></textarea>
+                    <button type="submit" id="submit-post-button">Đăng bài</button>
+                    <p id="loading-indicator" class="hidden">Đang tải lên, vui lòng chờ...</p>
+                </form>
+            </div>
+
+            <!-- Feed Container -->
+            <div id="feed-container">
+                <h2>Bảng tin</h2>
+                <!-- Posts will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- link js -->
+    <script type="module" src="./src/js/script.js"></script>
+</body>
+</html>

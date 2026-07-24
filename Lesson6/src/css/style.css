@@ -1,0 +1,231 @@
+/* Reset và base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+}
+
+/* Container styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background-color: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #1877f2;
+    font-size: 24px;
+}
+
+/* Auth container styles */
+.auth-container {
+    max-width: 400px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    padding: 20px;
+}
+
+.form-container h2 {
+    color: #1c1e21;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border-color: #1877f2;
+    outline: none;
+}
+
+button {
+    background-color: #1877f2;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #166fe5;
+}
+
+button:disabled {
+    background-color: #e4e6eb;
+    cursor: not-allowed;
+}
+
+/* User info section */
+.user-info {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Post creator styles */
+#post-creator {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#post-creator h3 {
+    margin-bottom: 15px;
+    color: #1c1e21;
+}
+
+#image-input {
+    margin-bottom: 15px;
+}
+
+#caption-input {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Feed styles */
+#feed-container {
+    display: grid;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.post {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.post .caption {
+    padding: 15px;
+    font-size: 16px;
+    border-bottom: 1px solid #dddfe2;
+}
+
+.post .author,
+.post .timestamp {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #65676b;
+}
+
+/* Utility classes */
+.hidden {
+    display: none !important;
+}
+
+/* Links */
+a {
+    color: #1877f2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Loading indicator */
+#loading-indicator {
+    text-align: center;
+    color: #65676b;
+    padding: 10px;
+}
+
+/* User section in header */
+#user-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#user-email {
+    color: #1c1e21;
+    font-weight: 500;
+}
+
+#logout-button {
+    background-color: #e4e6eb;
+    color: #1c1e21;
+}
+
+#logout-button:hover {
+    background-color: #d8dadf;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    #user-section {
+        flex-direction: column;
+    }
+
+    .post {
+        margin: 0 10px;
+    }
+}
