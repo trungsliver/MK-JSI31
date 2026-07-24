@@ -1,0 +1,21 @@
+Quy tắc đặt tên folder cho CP1: [TenLop]_[HoTen]_CP1
+Ví dụ: JSI31_BuiDucTrung_CP1
+
+Cấu trúc folder:
+- index.html 
+- Folder src: 
+    + Folder css: style.css
+    + Folder js: script.js, firebase-config.js
+- tracnghiem.txt (ghi các đáp án trắc nghiệm vào file này)
+
+Link đề bài: shorturl.at/fphMp
+Hạn nộp: 20h05
+
+Kết quả:
+Xuân Tú: 8/10 7/10      = 7.5
+Gia Bảo: 7/10 9/10      = 8
+Khải Hoàng: 6/10 8/10   = 7
+Bảo Lâm: 9/10 9/10      = 9
+Đình Hải: 8/10 8/10     = 8
+Minh Nhật: 10/10 8/10   = 9
+Quang Huy: 9/10 9/10    = 9
