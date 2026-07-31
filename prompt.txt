@@ -1,0 +1,48 @@
+================================ ADMIN =====================================
+
+Xây dựng index.html (admin) cho website kinh doanh TMĐT (giống Shopee)
+
+Yêu cầu:
+- Chỉ dùng HTML, CSS, Bootstrap, JS
+- Có responsive (PC - Tablet - mobile) 
+- Gửi tách riêng file HTML, CSS, JS
+- Sử dụng tone màu phù hợp với phong cách trẻ trung cảu các sàn TMĐT (màu chủ đạo giống shopee)
+- Viết đầy đủ hiệu ứng cho các thành phần trên giao diện
+
+Nội dung: 
+- Header:
+    + Có logo (ảnh hình tròn) và tên website phía bên trái 
+    + Menu điều hướng gồm các thẻ a có thể chuyển sang các trang html khác: index, products, orders
+- Body:
+    + Giao diện đăng nhập tài khoản admin gồm: username, password
+    + Yêu cầu bắt buộc phải đăng nhập thì mới vào được trang quản lý products, orders
+    + Tài khoản admin: username = "admin", password = "Admin@123"
+- Footer: tự tạo nội dung phù hợp
+
+------------------------------------------------------
+Xây dựng products.html (admin) cho website kinh doanh TMĐT (giống Shopee)
+
+Yêu cầu:
+- Chỉ dùng HTML, CSS, Bootstrap, JS
+- Có responsive (PC - Tablet - mobile) 
+- Gửi tách riêng file HTML, CSS, JS
+- Sử dụng tone màu phù hợp với phong cách trẻ trung cảu các sàn TMĐT (màu chủ đạo giống shopee)
+- Viết đầy đủ hiệu ứng cho các thành phần trên giao diện
+
+Nội dung: 
+- Header (giống trang admin):
+    + Có logo (ảnh hình tròn) và tên website phía bên trái 
+    + Menu điều hướng gồm các thẻ a có thể chuyển sang các trang html khác: index, products, orders
+- Body (điều chỉnh cho phù hợp):
+    + Hiển thị banner chứa thông tin: Tổng số sản phẩm, sản phẩm sắp hết hàng (số lượng <=10)
+    + Hiển thị toàn bộ sản phẩm từ Firebase Firestore
+    + Có chức năng: Thêm - Sửa - Xóa sản phẩm (nút sửa, xóa hiển thị ở card sản phẩm) và lưu vào Firebase Firestore
+    + Khi ấn nút Thêm/Sửa sản phẩm, sẽ hiển thị hộp thoại (popup) thông tin sản phẩm để điền/Sửa các thông tin:
+        . name: Tên sản phẩm
+        . image: Ảnh minh họa (link ảnh/src)
+        . price: Giá sản phẩm (giá bán)
+        . discount: Khuyến mãi (mặc định là 0% nếu không điền)
+        . description: Mô tả sản phẩm
+        . distributor: Đơn vị bán sản phẩm (shop phân phối)
+        . amount: Số lượng
+- Footer: tự tạo nội dung phù hợp
