@@ -1,0 +1,45 @@
+Thứ tự thuyết trình JSI31
+
+1. Gia Bảo: Website Xem phim
+    - Firebase Auth: Đăng ký - đăng nhập - quản lý hồ sơ
+    - Lấy API từ TMDB: hiện thông tin, xem chi tiết
+    - Firebase Firestore: viết nhận xet, review, đánh giá
+
+2. Quang Huy: Website trang sức
+    - Website admin: quản lý (thêm - sửa - xóa): sản phẩm, người dùng, đơn Hoàng
+    - Website client: 
+        + hiển thị, lọc, tìm kiếm sản phẩm (từ firestore)
+        + firebase auth: đăng ký - đăng nhập - đăng xuất
+        + dùng firebase firestore lưu đơn hàng
+
+3. Đình Hải: Multiplayer FFA PVP game
+    - Login mechanism & guest accounts (firebase auth)
+    - Saves progress
+    - Fight other players / bots
+    - Kill players for XP / bots for items
+    Will need a multiplayer server
+    - 2D side-scroller physics (already done!)
+
+4. Xuân Tú: Website TMDT (Giống shopee)
+    - Website admin: quản lý (thêm - sửa - xóa): sản phẩm, người dùng, đơn Hoàng
+    - Website client: 
+        + hiển thị, lọc, tìm kiếm sản phẩm (từ firestore)
+        + firebase auth: đăng ký - đăng nhập - đăng xuất
+        + dùng firebase firestore lưu đơn hàng
+
+5. Minh Nhật: Website chăm sóc thú cưng
+    - Firebase Auth
+    - Hiển thị, tìm kiếm, lọc sản phẩm (json)
+    - Firebase Auth + cloudinary: up bài viết thú cưng
+
+6. Bảo Lâm: Website giày bóng rổ
+    - Website admin: quản lý (thêm - sửa - xóa): sản phẩm, người dùng, đơn Hoàng
+    - Website client: 
+        + hiển thị, lọc, tìm kiếm sản phẩm (từ firestore)
+        + firebase auth: đăng ký - đăng nhập - đăng xuất
+        + dùng firebase firestore lưu đơn hàng
+
+7. Khải Hoàng: Website thời tiết
+    - Lấy API ngoài 
+    - Firebase Auth
+    - Firebase Firestore + cloudinary: chức năng post bài viết
