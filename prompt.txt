@@ -35,7 +35,8 @@ Nội dung:
     + Menu điều hướng gồm các thẻ a có thể chuyển sang các trang html khác: index, products, orders
 - Body (điều chỉnh cho phù hợp):
     + Hiển thị banner chứa thông tin: Tổng số sản phẩm, sản phẩm sắp hết hàng (số lượng <=10)
-    + Hiển thị toàn bộ sản phẩm từ Firebase Firestore
+    + Hiển thị toàn bộ sản phẩm từ Firebase Firestore theo hàng ngang
+    + Có thanh tìm kiếm sản phẩm theo name, distributor, lọc theo giá
     + Có chức năng: Thêm - Sửa - Xóa sản phẩm (nút sửa, xóa hiển thị ở card sản phẩm) và lưu vào Firebase Firestore
     + Khi ấn nút Thêm/Sửa sản phẩm, sẽ hiển thị hộp thoại (popup) thông tin sản phẩm để điền/Sửa các thông tin:
         . name: Tên sản phẩm
@@ -46,3 +47,36 @@ Nội dung:
         . distributor: Đơn vị bán sản phẩm (shop phân phối)
         . amount: Số lượng
 - Footer: tự tạo nội dung phù hợp
+
+======================================= USER =========================================
+
+Xây dựng header cho website kinh doanh TMĐT (giống Shopee)
+
+Yêu cầu:
+- Chỉ dùng HTML, CSS, Bootstrap, JS
+- Có responsive (PC - Tablet - mobile) 
+- Gửi tách riêng file HTML, CSS, JS
+- Sử dụng tone màu phù hợp với phong cách trẻ trung của các sàn TMĐT (màu chủ đạo giống shopee)
+- Viết đầy đủ hiệu ứng cho các thành phần trên giao diện
+- Có css cho cả lightmode, darkmode (khi darkmode có thêm class 'darkmode' ở thẻ body), tránh lỗi màu chữ không đạt tương phản với màu nền
+
+Nội dung: 
+- Có logo (ảnh hình tròn) và tên website phía bên trái 
+- Menu điều hướng gồm các thẻ a có thể chuyển sang các trang html khác: index, products, services, carts, orders, account
+- Nút toggle chỉnh darkmode/lightmode (mặc định là lightmode, khi chuyển sang darkmode thì lưu vào biến theme trong localStorage và thêm class "darkmode' cho thẻ body, khi load lại trang thì kiểm tra biến theme)
+- Gửi kèm cdn bootstrap icon
+
+--------------------------------------------------------
+Xây dựng footer cho website kinh doanh TMĐT (giống Shopee)
+
+Yêu cầu:
+- Chỉ dùng HTML, CSS, Bootstrap, JS
+- Có responsive (PC - Tablet - mobile) 
+- Gửi tách riêng file HTML, CSS, JS
+- Sử dụng tone màu phù hợp với phong cách trẻ trung của các sàn TMĐT (màu chủ đạo giống shopee)
+- Viết đầy đủ hiệu ứng cho các thành phần trên giao diện
+- Có css cho cả lightmode, darkmode (khi darkmode có thêm class 'darkmode' ở thẻ body), tránh lỗi màu chữ không đạt tương phản với màu nền
+- Chỉ gửi thẻ footer ở file HTML, còn lại gửi đầy đủ file css và js
+
+Nội dung: 
+- Tự generate nội dung sao cho chuyên nghiệp, đầy đủ

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Products</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/css/products.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="shadow-sm sticky-top">
+
+        <nav class="navbar navbar-expand-lg">
+
+            <div class="container">
+
+                <a href="index.html" class="navbar-brand d-flex align-items-center">
+
+                    <img src="https://hatuho.vn/wp-content/uploads/2025/06/logo-shopee-vectordohoa.com-3-01.jpg"
+                        class="logo" alt="logo">
+
+                    <span class="brand-name">
+                        Shopee Admin
+                    </span>
+
+                </a>
+
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarMenu">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                Login
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="products.html" class="nav-link active">
+                                Products
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="orders.html" class="nav-link">
+                                Orders
+                            </a>
+                        </li>
+
+                        <li class="nav-item ms-lg-3">
+
+                            <button class="btn btn-light logout-btn" onclick="logout()">
+
+                                <i class="bi bi-box-arrow-right"></i>
+
+                                Logout
+
+                            </button>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="py-5">
+
+        <div class="container">
+
+            <!-- Banner -->
+
+            <section class="dashboard mb-5">
+
+                <div class="row g-4">
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="summary-card">
+
+                            <div class="summary-icon bg-primary">
+
+                                <i class="bi bi-box-seam"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h5>Total Products</h5>
+
+                                <h2 id="totalProducts">0</h2>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="summary-card">
+
+                            <div class="summary-icon bg-warning">
+
+                                <i class="bi bi-exclamation-circle"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h5>Low Stock</h5>
+
+                                <h2 id="lowStockProducts">0</h2>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-4">
+
+                        <div class="summary-card">
+
+                            <div class="summary-icon bg-success">
+
+                                <i class="bi bi-currency-dollar"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h5>Total Inventory</h5>
+
+                                <h2 id="inventoryValue">0 ₫</h2>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Toolbar -->
+
+            <section class="toolbar mb-4">
+
+                <div class="row g-3 align-items-center">
+
+                    <div class="col-lg-6">
+
+                        <h3 class="fw-bold">
+                            Product Management
+                        </h3>
+
+                    </div>
+
+                    <div class="col-lg-6 text-lg-end">
+
+                        <button class="btn btn-add" data-bs-toggle="modal" data-bs-target="#productModal">
+
+                            <i class="bi bi-plus-circle"></i>
+
+                            Add Product
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Loading -->
+
+            <div id="loading" class="text-center py-5">
+
+                <div class="spinner-border text-danger"></div>
+
+                <p class="mt-3">
+                    Loading products...
+                </p>
+
+            </div>
+
+            <!-- Product List -->
+
+            <section>
+
+                <div class="row g-3 mb-4">
+
+                    <div class="col-lg-4">
+                        <input type="text" id="searchName" class="form-control" placeholder="🔍 Tìm theo tên sản phẩm">
+                    </div>
+
+                    <div class="col-lg-3">
+                        <input type="text" id="searchDistributor" class="form-control" placeholder="Nhà phân phối">
+                    </div>
+
+                    <div class="col-lg-2">
+                        <input type="number" id="minPrice" class="form-control" placeholder="Giá từ">
+                    </div>
+
+                    <div class="col-lg-2">
+                        <input type="number" id="maxPrice" class="form-control" placeholder="Giá đến">
+                    </div>
+
+                    <div class="col-lg-1">
+
+                        <button class="btn btn-add w-100" id="btnSearch">
+
+                            Search
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="row g-4" id="productList">
+
+                    <!-- JS Render -->
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- ================= PRODUCT MODAL ================= -->
+
+    <div class="modal fade" id="productModal" tabindex="-1">
+
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h4 id="modalTitle">
+
+                        Add Product
+
+                    </h4>
+
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <form id="productForm">
+
+                        <input type="hidden" id="productId">
+
+                        <div class="row">
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    Product Name
+                                </label>
+
+                                <input type="text" id="name" class="form-control" required>
+
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    Image URL
+                                </label>
+
+                                <input type="text" id="image" class="form-control">
+
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    Price
+                                </label>
+
+                                <input type="number" id="price" class="form-control" required>
+
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    Discount (%)
+                                </label>
+
+                                <input type="number" id="discount" class="form-control" value="0">
+
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    Distributor
+                                </label>
+
+                                <input type="text" id="distributor" class="form-control">
+
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    Quantity
+                                </label>
+
+                                <input type="number" id="amount" class="form-control">
+
+                            </div>
+
+                            <div class="col-12 mb-3">
+
+                                <label class="form-label">
+                                    Description
+                                </label>
+
+                                <textarea rows="4" id="description" class="form-control"></textarea>
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">
+
+                        Cancel
+
+                    </button>
+
+                    <button id="saveBtn" class="btn btn-save">
+
+                        Save Product
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= DELETE MODAL ================= -->
+
+    <div class="modal fade" id="deleteModal">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h4>
+
+                        Delete Product
+
+                    </h4>
+
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <p>
+
+                        Are you sure you want to delete this product?
+
+                    </p>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">
+
+                        Cancel
+
+                    </button>
+
+                    <button class="btn btn-danger" id="confirmDeleteBtn">
+
+                        Delete
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= TOAST ================= -->
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+
+        <div class="toast" id="liveToast">
+
+            <div class="toast-header">
+
+                <strong class="me-auto">
+
+                    Notification
+
+                </strong>
+
+                <button class="btn-close" data-bs-dismiss="toast"></button>
+
+            </div>
+
+            <div class="toast-body" id="toastMessage">
+
+                Success
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="mt-5">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-4">
+
+                    <h5>Shopee Admin</h5>
+
+                    <p>
+                        E-Commerce Administration Dashboard built with HTML, CSS, Bootstrap, JavaScript and Firebase.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <h5>Quick Links</h5>
+
+                    <ul class="footer-links">
+
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="orders.html">Orders</a></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <h5>Contact</h5>
+
+                    <p>Email: admin@shop.com</p>
+
+                    <p>Phone: 0123 456 789</p>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <p class="text-center mb-0">
+                © 2026 Shopee Admin Dashboard. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Firebase -->
+
+    <script type="module" src="./src/js/products.js"></script>
+
+</body>
+
+</html>
