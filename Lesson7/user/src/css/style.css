@@ -1,0 +1,248 @@
+/* ==========================================================================
+   HỆ THỐNG BIẾN MÀU SẮC (Tone trẻ trung, sáng tạo)
+   ========================================================================== */
+:root {
+    --bg-main: #f4f6f9;
+    --bg-surface: #ffffff;
+    --text-main: #2d3436;
+    --text-muted: #636e72;
+    --primary-color: #6c5ce7; /* Màu tím sáng tạo */
+    --accent-color: #ff7675;  /* Màu san hô trẻ trung */
+    --border-color: #dfe6e9;
+    --card-shadow: 0 10px 20px rgba(108, 92, 231, 0.05);
+    --bg-soft-primary: #eef2ff;
+    --bg-soft-danger: #fff5f5;
+}
+
+/* Kích hoạt chế độ Dark Mode khi body có class 'darkmode' */
+body.darkmode {
+    --bg-main: #0f111a;
+    --bg-surface: #161925;
+    --text-main: #f8f9fa;
+    --text-muted: #a4b0be;
+    --primary-color: #a29bfe;
+    --accent-color: #ff7675;
+    --border-color: #2f3542;
+    --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    --bg-soft-primary: rgba(162, 155, 254, 0.1);
+    --bg-soft-danger: rgba(255, 118, 117, 0.1);
+}
+
+/* Áp dụng nền cho thẻ main */
+.main-content {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+}
+
+.bg-surface {
+    background-color: var(--bg-surface) !important;
+    border: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   CAROUSEL BANNER
+   ========================================================================== */
+.carousel-img {
+    height: 420px;
+    object-fit: cover;
+    filter: brightness(90%);
+}
+
+@media (max-width: 768px) {
+    .carousel-img {
+        height: 250px;
+    }
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 16px;
+    padding: 1.5rem;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   INPUTS & BỘ LỌC
+   ========================================================================== */
+.filter-wrapper .form-control,
+.filter-wrapper .form-select {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 0.6rem 1rem;
+}
+
+.filter-wrapper .form-control:focus,
+.filter-wrapper .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(108, 92, 231, 0.25);
+}
+
+.btn-accent {
+    background-color: var(--accent-color);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.btn-accent:hover {
+    background-color: #ef6261;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   TIÊU ĐỀ KHU VỰC
+   ========================================================================== */
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.bg-soft-primary { background-color: var(--bg-soft-primary); }
+.bg-soft-danger { background-color: var(--bg-soft-danger); }
+
+/* ==========================================================================
+   THIẾT KẾ CARD SẢN PHẨM HIỆN ĐẠI
+   ========================================================================== */
+.product-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(108, 92, 231, 0.15);
+}
+
+/* Khung bọc ảnh chuẩn kích thước hình vuông tỉ lệ 1:1 */
+.product-image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* Giữ tỷ lệ 1:1 */
+    background: #f8f9fa;
+}
+
+.product-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Badge Giảm Giá Bo Góc Sáng Tạo */
+.discount-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: linear-gradient(45deg, #ff7675, #ff4757);
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 30px;
+    z-index: 2;
+    box-shadow: 0 4px 8px rgba(255, 71, 87, 0.3);
+}
+
+.product-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 2.8rem;
+}
+
+.product-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 2.4rem;
+}
+
+/* Giá & Thống kê */
+.price-box {
+    margin-top: auto;
+    background: var(--bg-main);
+    padding: 0.75rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.new-price {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #2ecc71;
+}
+
+body.darkmode .new-price {
+    color: #55efc4;
+}
+
+.old-price {
+    font-size: 0.85rem;
+    text-decoration: line-line-through;
+    text-decoration: line-through;
+    color: var(--text-muted);
+}
+
+.sold {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Nút Mua hàng phối màu sáng tạo */
+.buy-btn {
+    background: linear-gradient(135deg, var(--primary-color), #4834d4);
+    border: none;
+    border-radius: 10px;
+    padding: 0.6rem;
+    font-weight: 600;
+    width: 100%;
+    color: white !important;
+    transition: all 0.3s ease;
+}
+
+.buy-btn:hover {
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+    filter: brightness(110%);
+}

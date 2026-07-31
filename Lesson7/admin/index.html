@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-container">
+            <!-- Login Form -->
+            <div class="form-container" id="loginForm">
+                <h2>Login</h2>
+                <form id="login">
+                    <input type="email" id="loginEmail" placeholder="Email" required autocomplete="email">
+                    <input type="password" id="loginPassword" placeholder="Password" required autocomplete="current-password">
+                    <button type="submit">Login</button>
+                </form>
+                <div class="auth-divider">or</div>
+                <button id="googleLoginBtn" type="button">Login with Google</button>
+                <p>Don't have an account? <a href="#" id="showRegister">Register</a></p>
+            </div>
+
+            <!-- Register Form -->
+            <div class="form-container" id="registerForm" style="display: none;">
+                <h2>Register</h2>
+                <form id="register">
+                    <input type="email" id="registerEmail" placeholder="Email" required autocomplete="email">
+                    <input type="password" id="registerPassword" placeholder="Password" required autocomplete="new-password">
+                    <button type="submit"`>Register</button>
+                </form>
+                <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+            </div>
+        </div>
+
+        <!-- User Info Section -->
+        <div class="user-info" id="userInfo" style="display: none;">
+            <h2>Welcome admin!</h2>
+            <p>Email: <span id="userEmail"></span></p>
+            <button id="logoutBtn">Logout</button>
+            <a href="./manager.html">Manage Products</a>
+        </div>
+    </div>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-storage-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+    <!-- Link config firebase -->
+    <script  src="./src/js/firebase-config.js"></script>
+    <!-- Link main script -->
+    <script type="module" src="./src/js/script.js"></script>
+</body>
+</html>

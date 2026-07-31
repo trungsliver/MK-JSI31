@@ -1,0 +1,156 @@
+/* =============== HEADER ======================= */
+/* ===== ROOT THEME ===== */
+:root {
+  --bg: #ffffff;
+  --text: #222;
+  --primary: #4f46e5;
+  --accent: #22c55e;
+  --nav-bg: #f8f9ff;
+}
+
+/* DARK MODE */
+body.darkmode {
+  --bg: #0f172a;
+  --text: #e2e8f0;
+  --nav-bg: #111827;
+}
+
+/* ===== GLOBAL ===== */
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s ease;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== HEADER ===== */
+.main-header {
+  background: var(--nav-bg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 10px 0;
+}
+
+/* LOGO */
+.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .logo {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.brand-name {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 18px;
+}
+
+/* NAV LINK */
+.nav-link {
+  color: var(--text);
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+/* BUTTON THEME */
+.btn-theme {
+  border-radius: 50px;
+  background: var(--primary);
+  color: white;
+  border: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+    padding-top: 10px;
+  }
+}
+
+/* ================= FOOTER ================== */
+/* ===== FOOTER BASE ===== */
+.footer {
+  background: var(--footer-bg, #f8f9ff);
+  color: var(--text, #222);
+  transition: 0.3s ease;
+}
+
+/* DARK MODE */
+body.darkmode .footer {
+  --footer-bg: #0f172a;
+  color: #e2e8f0;
+}
+
+/* TITLE */
+.footer-title {
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--primary, #4f46e5);
+}
+
+/* TEXT */
+.footer-text {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* LINKS */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.2s;
+}
+
+.footer-links a:hover {
+  color: #22c55e;
+}
+
+/* SOCIAL */
+.social-icons {
+  display: flex;
+  gap: 12px;
+  font-size: 20px;
+}
+
+.social-icons a {
+  color: inherit;
+  transition: 0.2s;
+}
+
+.social-icons a:hover {
+  color: #4f46e5;
+  transform: translateY(-2px);
+}
+
+/* LINE */
+.footer-line {
+  margin: 20px 0;
+  opacity: 0.2;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  font-size: 13px;
+  opacity: 0.8;
+}

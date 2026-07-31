@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quản lý đơn hàng</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./src/css/orders.css">
+</head>
+
+<body>
+
+    <header class="admin-header">
+        <nav>
+            <h2>Admin</h2>
+
+            <button class="menu-toggle">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <ul>
+                <li>
+                    <a href="./manager.html">Sản phẩm</a>
+                </li>
+
+                <li class="active">
+                    <a href="./orders.html">Đơn hàng</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="admin-orders-page">
+
+        <!-- Hero -->
+        <section class="admin-hero">
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <div>
+                        <span class="hero-badge">
+                            <i class="bi bi-box-seam-fill"></i>
+                            Admin Dashboard
+                        </span>
+
+                        <h1>Quản lý đơn hàng</h1>
+
+                        <p>
+                            Theo dõi, cập nhật trạng thái và xử lý
+                            toàn bộ đơn hàng của hệ thống.
+                        </p>
+                    </div>
+
+                    <div class="hero-stats">
+
+                        <div class="stat-item">
+                            <h3 id="totalOrders">0</h3>
+                            <span>Đơn hàng</span>
+                        </div>
+
+                        <div class="stat-item">
+                            <h3 id="pendingOrders">0</h3>
+                            <span>Chờ xử lý</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Filter -->
+        <section class="filter-section">
+
+            <div class="container">
+
+                <div class="filter-card">
+
+                    <div class="row g-3">
+
+                        <div class="col-lg-4">
+                            <input type="text" id="searchInput" class="form-control"
+                                placeholder="Tìm theo email, SĐT, mã đơn...">
+                        </div>
+
+                        <div class="col-lg-3">
+                            <select id="statusFilter" class="form-select">
+
+                                <option value="">
+                                    Tất cả trạng thái
+                                </option>
+
+                                <option value="Pending">
+                                    Pending
+                                </option>
+
+                                <option value="Confirmed">
+                                    Confirmed
+                                </option>
+
+                                <option value="Shipping">
+                                    Shipping
+                                </option>
+
+                                <option value="Done">
+                                    Done
+                                </option>
+
+                                <option value="Return">
+                                    Return
+                                </option>
+
+                                <option value="Cancel">
+                                    Cancel
+                                </option>
+
+                            </select>
+                        </div>
+
+                        <div class="col-lg-2">
+                            <button id="refreshBtn" class="btn btn-primary w-100">
+
+                                <i class="bi bi-arrow-clockwise"></i>
+                                Tải lại
+
+                            </button>
+                        </div>
+
+                        <div class="col-lg-2">
+                            <button id="clearFilterBtn" class="btn btn-outline-secondary w-100">
+                                <i class="bi bi-x-circle"></i>
+                                Xóa lọc
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Orders -->
+        <section class="orders-section">
+
+            <div class="container">
+
+                <div id="loadingBox" class="loading-box">
+
+                    <div class="spinner-border text-primary"></div>
+
+                    <p>Đang tải dữ liệu...</p>
+
+                </div>
+
+                <div id="ordersContainer" class="orders-container">
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-storage-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Link config firebase -->
+    <script src="./src/js/firebase-config.js"></script>
+    <!-- Link main script -->
+    <script type="module" src="./src/js/orders.js"></script>
+</body>
+
+</html>

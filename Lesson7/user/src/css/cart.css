@@ -1,0 +1,248 @@
+/* ==========================================================================
+   HỆ THỐNG BIẾN MÀU SẮC (Đồng bộ Tone trẻ trung, sáng tạo của trang Index)
+   ========================================================================== */
+:root {
+    --bg-main: #f4f6f9;
+    --bg-surface: #ffffff;
+    --text-main: #2d3436;
+    --text-muted: #636e72;
+    --primary-color: #6c5ce7;
+    --accent-color: #ff7675;
+    --border-color: #dfe6e9;
+    --input-bg: #ffffff;
+}
+
+body.darkmode {
+    --bg-main: #0f111a;
+    --bg-surface: #161925;
+    --text-main: #f8f9fa;
+    --text-muted: #a4b0be;
+    --primary-color: #a29bfe;
+    --accent-color: #ff7675;
+    --border-color: #2f3542;
+    --input-bg: #1f2335;
+}
+
+body.darkmode .text-muted,
+body.darkmode .form-label,
+body.darkmode .input-group-text,
+body.darkmode .card-body .text-muted,
+body.darkmode .small.text-uppercase,
+body.darkmode .footer-text,
+body.darkmode .footer-links a {
+    color: var(--text-muted) !important;
+}
+
+body.darkmode .text-success {
+    color: #4ade80 !important;
+}
+
+body.darkmode .text-primary {
+    color: #c4b5fd !important;
+}
+
+body.darkmode .bg-light-subtle,
+body.darkmode .input-group-text.bg-transparent {
+    background-color: var(--bg-surface) !important;
+}
+
+body.darkmode .form-control::placeholder {
+    color: #8b97a8;
+}
+
+body.darkmode .invalid-feedback {
+    color: #fda4af;
+}
+
+.cart-main-content {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.bg-surface {
+    background-color: var(--bg-surface) !important;
+    border: 1px solid var(--border-color);
+}
+
+.fw-extrabold { font-weight: 800; }
+.text-accent { color: var(--accent-color) !important; }
+.cursor-pointer { cursor: pointer; }
+
+/* Tiêu đề trang trí */
+.page-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   GIAO DIỆN PHẦN TỬ SẢN PHẨM TRONG GIỎ HÀNG (CART ITEM)
+   ========================================================================== */
+.cart-item-row {
+    transition: background-color 0.2s ease;
+}
+.cart-item-row:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cart-img-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+    border: 1px solid var(--border-color);
+    flex-shrink: 0;
+}
+.cart-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cart-item-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-main);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Bộ tăng giảm số lượng thiết kế trẻ trung */
+.quantity-control-group {
+    max-width: 110px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--bg-main);
+}
+.quantity-btn {
+    border: none;
+    background: transparent;
+    color: var(--text-main);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+.quantity-btn:hover {
+    background-color: rgba(108, 92, 231, 0.1);
+}
+.quantity-input {
+    border: none;
+    background: transparent;
+    text-align: center;
+    width: 44px;
+    font-weight: 700;
+    color: var(--text-main);
+    font-size: 0.9rem;
+}
+.quantity-input:focus {
+    outline: none;
+}
+
+/* Nút xóa sản phẩm */
+.btn-delete-item {
+    color: var(--text-muted);
+    transition: color 0.2s;
+    background: transparent;
+    border: none;
+}
+.btn-delete-item:hover {
+    color: var(--accent-color);
+}
+
+/* ==========================================================================
+   GIAO DIỆN KHỐI THANH TOÁN (CHECKOUT FORM)
+   ========================================================================== */
+.form-control {
+    background-color: var(--input-bg);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 0.6rem 0.9rem;
+}
+body.darkmode .form-control {
+    background-color: var(--input-bg);
+    color: var(--text-main);
+}
+.form-control:focus {
+    background-color: var(--input-bg);
+    color: var(--text-main);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(108, 92, 231, 0.15);
+}
+
+.input-group-text {
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    border-radius: 10px;
+}
+
+/* Option chọn hình thức thanh toán */
+.payment-method-option {
+    background-color: var(--bg-main);
+    border-color: var(--border-color) !important;
+    transition: all 0.2s ease;
+}
+.payment-method-option.active {
+    border-color: var(--primary-color) !important;
+    background-color: rgba(108, 92, 231, 0.05);
+    box-shadow: 0 0 0 1px var(--primary-color);
+}
+.payment-method-option .form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Nút thanh toán */
+.btn-checkout {
+    background: linear-gradient(135deg, var(--primary-color), #4834d4);
+    border: none;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+.btn-checkout:hover {
+    filter: brightness(110%);
+    box-shadow: 0 8px 20px rgba(108, 92, 231, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Hiệu ứng mượt mà */
+.animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   CẤU HÌNH RESPONSIVE (MÀN HÌNH NHỎ)
+   ========================================================================== */
+@media (max-width: 767.98px) {
+    .cart-item-row {
+        position: relative;
+        padding-bottom: 1rem;
+    }
+    .btn-delete-item {
+        position: absolute;
+        top: 0.5rem;
+        right: 0;
+    }
+}

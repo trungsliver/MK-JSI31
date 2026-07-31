@@ -1,0 +1,465 @@
+/* Import font Inter - Font chuẩn mực cho giao diện quản trị */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* =========================================
+   1. GLOBAL STYLING
+   ========================================= */
+.main-admin-content {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f1f5f9; /* Nền xám nhạt chuyên nghiệp */
+    min-height: 100vh;
+    padding-bottom: 2rem;
+}
+
+body {
+    margin: 0;
+    background-color: #f1f5f9;
+}
+
+.top-toolbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+}
+
+.toolbar-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.manager-stats .stat-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    height: 100%;
+}
+
+.manager-stats .stat-card.warning {
+    border-color: #fde68a;
+    background: #fffbeb;
+}
+
+.manager-stats .stat-label {
+    color: #64748b;
+    font-size: 0.875rem;
+}
+
+.manager-stats h3 {
+    margin: 0.35rem 0 0;
+    color: #0f172a;
+    font-size: 1.6rem;
+}
+
+.text-primary-custom {
+    color: #0f172a; 
+    letter-spacing: -0.5px;
+}
+
+/* =========================================
+   2. BUTTONS & ACTIONS
+   ========================================= */
+.btn {
+    transition: all 0.25s ease-in-out;
+}
+
+/* Nút Thêm mới */
+.btn-custom-add {
+    background-color: #2563eb; 
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.25rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-custom-add:hover, .btn-custom-add:focus {
+    background-color: #1d4ed8; 
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.25);
+}
+
+/* Nút Lưu (Cập nhật) */
+.btn-warning {
+    background-color: #f59e0b !important;
+    color: #ffffff !important;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.25rem;
+    font-weight: 500;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-warning:hover {
+    background-color: #d97706 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(245, 158, 11, 0.25);
+}
+
+/* Nút Hủy */
+.btn-light {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #475569;
+    font-weight: 500;
+    padding: 0.6rem 1.25rem;
+    border-radius: 6px;
+}
+
+.btn-light:hover {
+    background-color: #f1f5f9;
+    border-color: #94a3b8;
+    color: #0f172a;
+}
+
+/* Nút hành động trong bảng (Sửa/Xóa) */
+.btn-action {
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+.edit-btn:hover { background-color: #eff6ff; border-color: #bfdbfe; color: #2563eb !important; }
+.delete-btn:hover { background-color: #fef2f2; border-color: #fecaca; color: #dc2626 !important; }
+
+/* =========================================
+   3. TABLE & CARDS
+   ========================================= */
+.card {
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+    background-color: #ffffff;
+}
+
+.custom-table thead th {
+    background-color: #f8fafc;
+    color: #64748b;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.custom-table tbody td {
+    padding: 1rem;
+    color: #334155;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: middle;
+}
+
+.custom-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+.product-img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    padding: 2px; 
+}
+
+.description-text {
+    max-width: 250px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+}
+
+/* =========================================
+   4. MODAL & FORMS (FIX LỖI HIỂN THỊ)
+   ========================================= */
+.modal-content {
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.modal-header {
+    border-bottom: 1px solid #e2e8f0 !important;
+    background-color: #ffffff !important;
+    padding: 1.25rem 1.5rem;
+    border-radius: 16px 16px 0 0;
+}
+
+.modal-title {
+    color: #0f172a !important;
+    font-size: 1.25rem;
+    font-weight: 700 !important;
+}
+
+/* Fix nút "X" tắt modal */
+.btn-close {
+    background-color: #f1f5f9;
+    border-radius: 50%;
+    padding: 0.6rem;
+    opacity: 0.8;
+    transition: all 0.2s;
+}
+
+.btn-close:hover {
+    background-color: #e2e8f0;
+    opacity: 1;
+    transform: rotate(90deg); /* Hiệu ứng xoay khi đưa chuột vào */
+}
+
+/* Bố cục Form (Ép thẻ label nằm trên thẻ input) */
+.modal-body {
+    padding: 1.5rem;
+    background-color: #f8fafc; /* Nền form xám rất nhẹ để làm nổi bật ô nhập */
+}
+
+.modal-body .mb-3 {
+    margin-bottom: 1.25rem !important; /* Tăng khoảng cách giữa các trường */
+}
+
+.form-label {
+    display: block; /* Bắt buộc để Label không bị rớt ngang Input */
+    font-size: 0.875rem;
+    font-weight: 600 !important;
+    color: #475569;
+    margin-bottom: 0.5rem;
+}
+
+/* Ô nhập liệu */
+.form-control-custom {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    padding: 0.65rem 1rem;
+    font-size: 0.95rem;
+    color: #0f172a;
+    background-color: #ffffff;
+    transition: all 0.25s ease;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.01) inset;
+}
+
+select.form-control-custom {
+    padding-right: 2.25rem;
+}
+
+.form-control-custom:hover {
+    border-color: #94a3b8;
+}
+
+.form-control-custom:focus {
+    border-color: #3b82f6;
+    outline: none;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15); /* Vòng sáng glow bao quanh khi nhập */
+}
+
+/* Modal Footer */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    border-top: 1px solid #e2e8f0 !important;
+    background-color: #ffffff;
+    padding: 1.25rem 1.5rem;
+    border-radius: 0 0 16px 16px;
+}
+
+/* =============== HEADER============================ */
+/* =========================
+   ADMIN HEADER
+========================= */
+
+.admin-header {
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #eef2f7;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.admin-header nav {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 24px;
+
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.admin-header h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 800;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* =========================
+   MENU
+========================= */
+
+.admin-header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.admin-header li {
+    position: relative;
+}
+
+.admin-header a {
+    text-decoration: none;
+
+    color: #64748b;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    padding: 12px 20px;
+    border-radius: 12px;
+
+    transition: all .3s ease;
+}
+
+/* Hover */
+
+.admin-header a:hover {
+    color: #4f46e5;
+    background: #eef2ff;
+}
+
+/* Active */
+
+.admin-header li.active a {
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+
+    box-shadow:
+        0 10px 25px rgba(79,70,229,.25);
+}
+
+/* =========================
+   MOBILE BUTTON
+========================= */
+
+.menu-toggle {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    font-size: 1.8rem;
+    color: #4f46e5;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991px) {
+
+    .admin-header nav {
+        padding: 0 18px;
+    }
+
+    .admin-header a {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .top-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .toolbar-actions {
+        justify-content: stretch;
+    }
+
+    .toolbar-actions .btn {
+        width: 100%;
+    }
+
+    .admin-header nav {
+        height: auto;
+        padding: 15px 18px;
+
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .admin-header ul {
+        width: 100%;
+        margin-top: 15px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        display: none;
+    }
+
+    .admin-header ul.show {
+        display: flex;
+    }
+
+    .admin-header li {
+        width: 100%;
+    }
+
+    .admin-header a {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+}

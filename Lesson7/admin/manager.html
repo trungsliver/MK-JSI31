@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quản lý sản phẩm</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./src/css/manager.css" />
+</head>
+
+<body>
+    <!-- <nav>
+        <h2>Admin</h2>
+        <ul>
+            <li class="active"><a href="./manager.html">Sản phẩm</a></li>
+            <li><a href="./orders.html">Đơn hàng</a></li>
+        </ul>
+    </nav> -->
+
+    <header class="admin-header">
+        <nav>
+            <h2>Admin</h2>
+
+            <button class="menu-toggle">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <ul>
+                <li class="active">
+                    <a href="./manager.html">Sản phẩm</a>
+                </li>
+
+                <li>
+                    <a href="./orders.html">Đơn hàng</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main class="container-fluid py-4 main-admin-content">
+        <div class="top-toolbar mb-4">
+            <div>
+                <h2 class="fw-bold text-primary-custom mb-1"><i class="bi bi-box-seam me-2"></i>Quản lý sản phẩm</h2>
+                <p class="text-muted mb-0">Theo dõi tồn kho, tìm kiếm nhanh và cập nhật thông tin sản phẩm.</p>
+            </div>
+            <div class="toolbar-actions">
+                <button id="refresh-products" class="btn btn-light shadow-sm">
+                    <i class="bi bi-arrow-clockwise me-1"></i> Làm mới
+                </button>
+                <button class="btn btn-custom-add shadow-sm" data-bs-toggle="modal" data-bs-target="#addProductModal">
+                    <i class="bi bi-plus-circle me-1"></i> Thêm sản phẩm mới
+                </button>
+            </div>
+        </div>
+
+        <div class="row g-3 mb-4 manager-stats">
+            <div class="col-md-6 col-xl-3">
+                <div class="stat-card">
+                    <span class="stat-label">Tổng sản phẩm</span>
+                    <h3 id="total-products">0</h3>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="stat-card warning">
+                    <span class="stat-label">Sắp hết hàng (<=10)</span>
+                    <h3 id="low-stock-products">0</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm border-0 rounded-4 mb-3">
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-lg-8">
+                        <input type="text" id="product-search" class="form-control form-control-custom" placeholder="Tìm theo tên hoặc mô tả sản phẩm...">
+                    </div>
+                    <div class="col-lg-4">
+                        <select id="stock-filter" class="form-select form-control-custom">
+                            <option value="all">Tất cả tồn kho</option>
+                            <option value="in-stock">Còn hàng</option>
+                            <option value="low-stock">Sắp hết hàng (<=10)</option>
+                            <option value="out-stock">Hết hàng</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm border-0 rounded-4 overflow-hidden">
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0 custom-table">
+                        <thead class="table-light">
+                            <tr>
+                                <th scope="col" class="text-center" width="80">Ảnh</th>
+                                <th scope="col">Tên sản phẩm</th>
+                                <th scope="col">Mô tả</th>
+                                <th scope="col" class="text-end">Giá (VNĐ)</th>
+                                <th scope="col" class="text-center">Tồn kho</th>
+                                <th scope="col" class="text-center" width="150">Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody id="product-list">
+                            <tr>
+                                <td colspan="6" class="text-center py-4 text-muted">
+                                    <div class="spinner-border text-primary-custom" role="status"></div>
+                                    <p class="mt-2 mb-0">Đang tải dữ liệu...</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content border-0 rounded-4 shadow">
+                    <div class="modal-header bg-light border-0 rounded-top-4">
+                        <h5 class="modal-title fw-bold text-dark" id="addModalLabel">Thêm Văn Phòng Phẩm</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form id="form-add-product">
+                        <div class="modal-body p-4">
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Tên sản phẩm</label>
+                                <input type="text" class="form-control form-control-custom" id="add-name" required>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label fw-semibold">Giá (VNĐ)</label>
+                                    <input type="number" class="form-control form-control-custom" id="add-price" min="0"
+                                        required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label fw-semibold">Tồn kho</label>
+                                    <input type="number" class="form-control form-control-custom" id="add-stock" min="0"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Link ảnh (URL)</label>
+                                <input type="url" class="form-control form-control-custom" id="add-image" required
+                                    placeholder="https://...">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Mô tả chi tiết</label>
+                                <textarea class="form-control form-control-custom" id="add-description" rows="3"
+                                    required></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer border-0">
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Hủy</button>
+                            <button type="submit" class="btn btn-custom-add px-4">Thêm ngay</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content border-0 rounded-4 shadow">
+                    <div class="modal-header bg-light border-0 rounded-top-4">
+                        <h5 class="modal-title fw-bold text-dark" id="editModalLabel">Cập Nhật Sản Phẩm</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form id="form-edit-product">
+                        <div class="modal-body p-4">
+                            <input type="hidden" id="edit-id">
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Tên sản phẩm</label>
+                                <input type="text" class="form-control form-control-custom" id="edit-name" required>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label fw-semibold">Giá (VNĐ)</label>
+                                    <input type="number" class="form-control form-control-custom" id="edit-price"
+                                        min="0" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label fw-semibold">Tồn kho</label>
+                                    <input type="number" class="form-control form-control-custom" id="edit-stock"
+                                        min="0" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Link ảnh (URL)</label>
+                                <input type="url" class="form-control form-control-custom" id="edit-image" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Mô tả chi tiết</label>
+                                <textarea class="form-control form-control-custom" id="edit-description" rows="3"
+                                    required></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer border-0">
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Hủy</button>
+                            <button type="submit" class="btn btn-warning text-white px-4">Lưu thay đổi</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+    <script src="./src/js/manager.js"></script> -->
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-storage-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Link config firebase -->
+    <script src="./src/js/firebase-config.js"></script>
+    <!-- Link main script -->
+    <script type="module" src="./src/js/manager.js"></script>
+</body>
+
+</html>
