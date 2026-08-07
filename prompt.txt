@@ -80,3 +80,46 @@ Yêu cầu:
 
 Nội dung: 
 - Tự generate nội dung sao cho chuyên nghiệp, đầy đủ
+------------------------------------------------------------
+Xây dựng main-content cho trang account cho website kinh doanh TMĐT (giống Shopee)
+
+Yêu cầu:
+- Chỉ dùng HTML, CSS, Bootstrap, JS
+- Có responsive (PC - Tablet - mobile) 
+- Gửi tách riêng file HTML, CSS, JS
+- Sử dụng tone màu phù hợp với phong cách trẻ trung của các sàn TMĐT (màu chủ đạo giống shopee)
+- Viết đầy đủ hiệu ứng cho các thành phần trên giao diện
+- Có css cho cả lightmode, darkmode (khi darkmode có thêm class 'darkmode' ở thẻ body), tránh lỗi màu chữ không đạt tương phản với màu nền
+- Chỉ gửi thẻ main ở file HTML, còn lại gửi đầy đủ file css và js
+
+Nội dung & Chức năng:
+- Sử dụng Firebase Auth và Firebase Firestore để thực hiện các chức năng
+- Gồm có 3 phần chính: đăng ký - đăng nhập - hiển thị thông tin tài khoản (đăng xuất). Chỉ hiện 1 trong 3 phần lên màn hình trong 1 thời điểm, có nút để chuyển giữa các phần. 
+- Mặc định khi mở trang, kiểm tra xem có ai đang đăng nhập không (biến current_user trong localStorage, firebase, ...)
+	+ Nếu có thông tin: hiện trang thông tin
+	+ Nếu chưa có biến / chưa có thông tin: hiện trang login
+- Phần đăng ký:
+	+ Gồm các thông tin (đảm bảo đủ thông tin):
+		. username: ít nhất 3 ký tự, không trùng với username đã có
+		. email: đúng định dạng, không trùng email đã đăng ký
+		. sdt: dùng regex validate theo kiểu sđt Việt Nam
+		. dob: đảm bảo ít 13 tuổi
+		. password: ít nhất 6 ký tự, có ký tự viết hoa, viết thường, số
+		. confirm password: giống password
+		. checkbox: i agree with Terms and conditions...
+		. 1 thẻ p để hiện thông báo lỗi / thành công
+		. 1 nút chuyển sang đăng nhập
+	+ Khi đăng ký thành công thì lưu tài khoản vào firebase auth, firebase firestore danh sách users trong localStorage, chuyển sang đăng nhập
+- Phần đăng nhập:
+	+ Gồm các thông tin (đảm bảo đủ thông tin):
+		. email: đúng định dạng, không trùng email đã đăng ký
+		. password: ít nhất 6 ký tự, có ký tự viết hoa, viết thường, số
+		. 1 thẻ p để hiện thông báo lỗi / thành công
+		. 1 nút chuyển sang đăng ký
+	+ Kiểm tra thông tin ở Firebase Auth
+	+ Nếu đăng nhập thành công thì lưu thông tin người dùng hiện tại + thời gian đăng nhập vào biến current_users ở localStorage, chuyển sang màn hình hiển thị thông tin
+	+ Nút đăng nhập bằng Google (sử dụng firebase auth)
+
+- Phần hiển thị thông tin:
+	+ Lấy thông tin current_user trong localStorage (hoặc firebase): userrname, email, sđt, dob, last_login và hiển thị lên màn hình
+	+ Có nút đăng xuất. Khi ấn đăng xuất thì về lại trang login
