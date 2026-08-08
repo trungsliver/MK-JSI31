@@ -123,3 +123,25 @@ Nội dung & Chức năng:
 - Phần hiển thị thông tin:
 	+ Lấy thông tin current_user trong localStorage (hoặc firebase): userrname, email, sđt, dob, last_login và hiển thị lên màn hình
 	+ Có nút đăng xuất. Khi ấn đăng xuất thì về lại trang login
+----------------------------------------------------------------------------------
+NHỚ CHỤP ẢNH CÂU TRÚC SẢN PHẨM TRÊN FIREBASE FIRESTORE
+
+Xây dựng main-content cho trang products cho website kinh doanh TMĐT (giống Shopee)
+
+Yêu cầu:
+- Chỉ dùng HTML, CSS, Bootstrap, JS
+- Có responsive (PC - Tablet - mobile) 
+- Gửi tách riêng file HTML, CSS, JS
+- Sử dụng tone màu phù hợp với phong cách trẻ trung của các sàn TMĐT (màu chủ đạo giống shopee)
+- Viết đầy đủ hiệu ứng cho các thành phần trên giao diện
+- Có css cho cả lightmode, darkmode (khi darkmode có thêm class 'darkmode' ở thẻ body), tránh lỗi màu chữ không đạt tương phản với màu nền
+- Chỉ gửi thẻ main ở file HTML, còn lại gửi đầy đủ file css và js
+
+Nội dung & chức năng : 
+-có thanh tìm kiếm theo tên (mặc định hiển thị tất cả sản phẩm nếu không nhập nội dung)
+-có combo box để lọc sản phẩm theo brand, category, distributor,... (tùy theo cấu trúc sản phẩm)
+-sắp xếp theo price giảm dần, tăng dần, trong khoảng giá 
+-kích thước các card sản phẩm bằng nhau, kích thước ảnh bằng nhau, có hiệu ứng cho các card( hiệu ứng hover,..), nếu description dài thì chỉ hiển thị 1 phần
+-dùng js để tự lấy các sản phẩm trong firebase Firestore (chèn ảnh chụp cấu trúc trên firestore)
+-1 card sản phẩm có : đầy đủ thông tin như ảnh chụp và nút Thêm vào giỏ hàng
+-khi ấn vào nút mua hàng, thêm sản phẩm vào giỏ hàng cart trong localstorage
