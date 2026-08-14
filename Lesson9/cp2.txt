@@ -1,0 +1,8 @@
+Quy tắc đặt tên file cho CP1: [TenLop]_[HoTen]_CP2
+Ví dụ: JSI31_BuiDucTrung_CP2
+
+Link đề bài: shorturl.at/LdaJJ
+
+Lưu ý: 
+    - CHỈ LÀM TRẮC NGHIỆM 
+    - PHẦN TỰ LUẬN SẼ CHẤM PHẦN FIREBASE AUTH Ở SPCK
