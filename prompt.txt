@@ -145,3 +145,89 @@ Nội dung & chức năng :
 -dùng js để tự lấy các sản phẩm trong firebase Firestore (chèn ảnh chụp cấu trúc trên firestore)
 -1 card sản phẩm có : đầy đủ thông tin như ảnh chụp và nút Thêm vào giỏ hàng
 -khi ấn vào nút mua hàng, thêm sản phẩm vào giỏ hàng cart trong localstorage
+----------------------------------------------------------------------------------
+NHỚ CHỤP ẢNH CÂU TRÚC SẢN PHẨM TRÊN FIREBASE FIRESTORE & FILE firebase-config.js
+
+Xây dựng main-content cho trang index cho website kinh doanh TMĐT (giống Shopee)
+
+Yêu cầu:
+- Chỉ dùng HTML, CSS, Bootstrap, JS
+- Có responsive (PC - Tablet - mobile) 
+- Gửi tách riêng file HTML, CSS, JS
+- Sử dụng tone màu phù hợp với phong cách trẻ trung của các sàn TMĐT (màu chủ đạo giống shopee)
+- Viết đầy đủ hiệu ứng cho các thành phần trên giao diện
+- Có css cho cả lightmode, darkmode (khi darkmode có thêm class 'darkmode' ở thẻ body), tránh lỗi màu chữ không đạt tương phản với màu nền
+- Chỉ gửi thẻ main ở file HTML, còn lại gửi đầy đủ file css và js
+- Các file gửi viết ngắn gọn, không có dòng nào không có nội dung, mỗi câu lệnh (đối với js) chỉ viết trên 1 dòng
+
+Nội dung & chức năng : 
+-Có carousel gồm 3 ảnh, có thể tự động chuyển ảnh sau mỗi 3s, có nút để chuyển thủ công
+-Có 3 danh mục sản phẩm: Sản phẩm hot, sản phẩm mới, sản phẩm giảm giá. Mỗi danh mục có 1 hàng sản phẩm.
+-kích thước các card sản phẩm bằng nhau, kích thước ảnh bằng nhau, có hiệu ứng cho các card( hiệu ứng hover,..), nếu description dài thì chỉ hiển thị 1 phần
+-dùng js để tự lấy các sản phẩm trong firebase Firestore (chèn ảnh chụp cấu trúc trên firestore)
+-1 card sản phẩm có : đầy đủ thông tin như ảnh chụp và nút Thêm vào giỏ hàng
+-khi ấn vào nút mua hàng, thêm sản phẩm vào giỏ hàng cart trong localstorage
+-----------------------------------------------------------------------------------
+NHỚ CHỤP ẢNH CÂU TRÚC SẢN PHẨM TRÊN FIREBASE FIRESTORE & FILE firebase-config.js & LOCAL STORAGE (phần lưu giỏ hàng)
+
+Xây dựng main-content cho trang cart cho website kinh doanh TMĐT (giống Shopee)
+
+Yêu cầu:
+- Chỉ dùng HTML, CSS, Bootstrap, JS
+- Có responsive (PC - Tablet - mobile) 
+- Gửi tách riêng file HTML, CSS, JS
+- Sử dụng tone màu phù hợp với phong cách trẻ trung của các sàn TMĐT (màu chủ đạo giống shopee)
+- Viết đầy đủ hiệu ứng cho các thành phần trên giao diện
+- Có css cho cả lightmode, darkmode (khi darkmode có thêm class 'darkmode' ở thẻ body), tránh lỗi màu chữ không đạt tương phản với màu nền
+- Chỉ gửi thẻ main ở file HTML, còn lại gửi đầy đủ file css và js
+- Các file gửi viết ngắn gọn, không có dòng nào không có nội dung, mỗi câu lệnh (đối với js) chỉ viết trên 1 dòng
+
+Nội dung & Chức năng: 
+- Giỏ hàng 
+	+ Lấy thông tin các sản phẩm trong giỏ hàng từ localStorage cart (hiện ảnh, tên sản phẩm, số lượng) 
+	+ Có thể sửa số lượng sản phẩm, xóa sản phẩm (khi xóa cần có cảnh báo) 
+	+ Tính tổng tiền sản phẩm 
+- Thanh toán: 
+	+ Lấy thông tin user từ localstorage currentUser (username, email, phone) 
+	+ Cho phép chọn hình thức thanh toán: COD (cần nhập địa chỉ, ghi chú), thanh toán qua thẻ ngân hàng (nhập các thông tin cần thiết) và verify các trường thông tin cần thiết 
+	+ Thông báo khi ấn nút thanh toán (thành công, thất bại kèm lỗi)
+- Khi thanh toán thành công, lưu đơn hàng vào Firebase Firestore kèm theo uid/email người dùng, mỗi đơn hàng gồm 
+	+ Thông tin người dùng: email, username, uid, sđt, địa chỉ,...
+	+ Danh sách sản phẩm kèm số lượng (sản phẩm đầy đủ thông tin)
+	+ Tổng tiền đơn hàng
+	+ Ngày tạo đơn hàng
+	+ Trạng thái đơn hàng (Pending, Confirmed, Shipping, Returning, Delivered, Canceled), mặc định là pending
+--------------------------------------------------------------------------------------------------------
+NHỚ CHỤP ẢNH CÂU TRÚC TRÊN FIREBASE FIRESTORE (sản phẩm & order) & FILE firebase-config.js 
+
+Xây dựng main-content cho trang order cho website kinh doanh TMĐT (giống Shopee)
+
+Yêu cầu:
+- Chỉ dùng HTML, CSS, Bootstrap, JS
+- Có responsive (PC - Tablet - mobile) 
+- Gửi tách riêng file HTML, CSS, JS
+- Sử dụng tone màu phù hợp với phong cách trẻ trung của các sàn TMĐT (màu chủ đạo giống shopee)
+- Viết đầy đủ hiệu ứng cho các thành phần trên giao diện
+- Có css cho cả lightmode, darkmode (khi darkmode có thêm class 'darkmode' ở thẻ body), tránh lỗi màu chữ không đạt tương phản với màu nền
+- Chỉ gửi thẻ main ở file HTML, còn lại gửi đầy đủ file css và js
+- Các file gửi viết ngắn gọn, không có dòng nào không có nội dung, mỗi câu lệnh (đối với js) chỉ viết trên 1 dòng
+
+Nội dung & Chức năng: 
+- Lấy toàn bộ đơn hàng từ firestore theo user đang đăng nhập (có thể dùng curentUser trong localStorage)
+- Hiển thị toàn bộ các thông tin đơn hàng
+- Có thể hủy đơn hàng nếu trạng thái đơn hàng đang là "Pending"
+----------------------------------------------------------------------------------------------------
+Xây dựng main-content cho trang services cho website kinh doanh TMĐT (giống Shopee)
+
+Yêu cầu:
+- Chỉ dùng HTML, CSS, Bootstrap, JS
+- Có responsive (PC - Tablet - mobile) 
+- Gửi tách riêng file HTML, CSS, JS
+- Sử dụng tone màu phù hợp với phong cách trẻ trung của các sàn TMĐT (màu chủ đạo giống shopee)
+- Viết đầy đủ hiệu ứng cho các thành phần trên giao diện
+- Có css cho cả lightmode, darkmode (khi darkmode có thêm class 'darkmode' ở thẻ body), tránh lỗi màu chữ không đạt tương phản với màu nền
+- Chỉ gửi thẻ main ở file HTML, còn lại gửi đầy đủ file css và js
+- Các file gửi viết ngắn gọn, không có dòng nào không có nội dung, mỗi câu lệnh (đối với js) chỉ viết trên 1 dòng
+
+Nội dung & Chức năng: 
+- Tự xây dựng nội dung phù hợp
