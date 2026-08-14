@@ -135,6 +135,543 @@
     </header>
 
     <!-- ================== MAIN CONTENT ====================== -->
+    <main class="account-main">
+
+        <!-- =========================
+         ACCOUNT CONTAINER
+    ========================== -->
+        <div class="account-container">
+
+            <!-- =========================
+             LEFT BRANDING
+        ========================== -->
+            <section class="account-brand">
+
+                <div class="brand-content">
+
+                    <div class="brand-icon">
+                        <i class="bi bi-person-heart"></i>
+                    </div>
+
+                    <h1>My Account</h1>
+
+                    <p>
+                        Quản lý tài khoản, thông tin cá nhân
+                        và trải nghiệm mua sắm của bạn.
+                    </p>
+
+                    <div class="brand-features">
+
+                        <div class="brand-feature">
+                            <i class="bi bi-shield-check"></i>
+                            <span>Bảo mật thông tin</span>
+                        </div>
+
+                        <div class="brand-feature">
+                            <i class="bi bi-lightning-charge"></i>
+                            <span>Đăng nhập nhanh chóng</span>
+                        </div>
+
+                        <div class="brand-feature">
+                            <i class="bi bi-bag-heart"></i>
+                            <span>Quản lý đơn hàng dễ dàng</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+             RIGHT ACCOUNT PANEL
+        ========================== -->
+            <section class="account-panel">
+
+                <!-- =========================
+                 LOGIN
+            ========================== -->
+                <div id="login-section" class="account-section">
+
+                    <div class="account-header">
+
+                        <div class="account-header-icon">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                        </div>
+
+                        <div>
+                            <h2>Đăng nhập</h2>
+                            <p>Chào mừng bạn quay trở lại!</p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Login Form -->
+                    <form id="login-form" novalidate>
+
+                        <!-- Email -->
+                        <div class="form-group">
+
+                            <label for="login-email">
+                                Email
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="bi bi-envelope"></i>
+
+                                <input type="email" id="login-email" class="form-control account-input"
+                                    placeholder="Nhập email của bạn" autocomplete="email">
+
+                            </div>
+
+                            <small id="login-email-error" class="field-error"></small>
+
+                        </div>
+
+
+                        <!-- Password -->
+                        <div class="form-group">
+
+                            <label for="login-password">
+                                Mật khẩu
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="bi bi-lock"></i>
+
+                                <input type="password" id="login-password" class="form-control account-input"
+                                    placeholder="Nhập mật khẩu" autocomplete="current-password">
+
+                                <button type="button" class="password-toggle" data-target="login-password">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+
+                            </div>
+
+                            <small id="login-password-error" class="field-error"></small>
+
+                        </div>
+
+
+                        <!-- Login Message -->
+                        <p id="login-message" class="account-message"></p>
+
+
+                        <!-- Login Button -->
+                        <button type="submit" id="login-btn" class="account-btn primary-btn">
+                            <span class="btn-text">
+                                Đăng nhập
+                            </span>
+
+                            <span class="btn-loading d-none">
+                                <span class="spinner-border spinner-border-sm"></span>
+
+                                Đang đăng nhập...
+                            </span>
+                        </button>
+
+                    </form>
+
+
+                    <!-- Divider -->
+                    <div class="account-divider">
+                        <span>HOẶC</span>
+                    </div>
+
+
+                    <!-- Google Login -->
+                    <button type="button" id="google-login-btn" class="google-btn">
+                        <i class="bi bi-google"></i>
+                        <span>Đăng nhập bằng Google</span>
+                    </button>
+
+
+                    <!-- Register Link -->
+                    <div class="switch-account">
+
+                        <span>Chưa có tài khoản?</span>
+
+                        <button type="button" class="switch-btn" data-target-section="register-section">
+                            Đăng ký ngay
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                 REGISTER
+            ========================== -->
+                <div id="register-section" class="account-section d-none">
+
+                    <div class="account-header">
+
+                        <div class="account-header-icon">
+                            <i class="bi bi-person-plus"></i>
+                        </div>
+
+                        <div>
+                            <h2>Tạo tài khoản</h2>
+                            <p>Đăng ký để bắt đầu mua sắm.</p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Register Form -->
+                    <form id="register-form" novalidate>
+
+                        <!-- Username -->
+                        <div class="form-group">
+
+                            <label for="register-username">
+                                Username
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="bi bi-person"></i>
+
+                                <input type="text" id="register-username" class="form-control account-input"
+                                    placeholder="Ít nhất 3 ký tự" autocomplete="username">
+
+                            </div>
+
+                            <small id="register-username-error" class="field-error"></small>
+
+                        </div>
+
+
+                        <!-- Email -->
+                        <div class="form-group">
+
+                            <label for="register-email">
+                                Email
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="bi bi-envelope"></i>
+
+                                <input type="email" id="register-email" class="form-control account-input"
+                                    placeholder="example@gmail.com" autocomplete="email">
+
+                            </div>
+
+                            <small id="register-email-error" class="field-error"></small>
+
+                        </div>
+
+
+                        <!-- Phone -->
+                        <div class="form-group">
+
+                            <label for="register-phone">
+                                Số điện thoại
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="bi bi-telephone"></i>
+
+                                <input type="tel" id="register-phone" class="form-control account-input"
+                                    placeholder="09xxxxxxxx" autocomplete="tel">
+
+                            </div>
+
+                            <small id="register-phone-error" class="field-error"></small>
+
+                        </div>
+
+
+                        <!-- DOB -->
+                        <div class="form-group">
+
+                            <label for="register-dob">
+                                Ngày sinh
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="bi bi-calendar3"></i>
+
+                                <input type="date" id="register-dob" class="form-control account-input">
+
+                            </div>
+
+                            <small id="register-dob-error" class="field-error"></small>
+
+                        </div>
+
+
+                        <!-- Password -->
+                        <div class="form-group">
+
+                            <label for="register-password">
+                                Mật khẩu
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="bi bi-lock"></i>
+
+                                <input type="password" id="register-password" class="form-control account-input"
+                                    placeholder="Ít nhất 6 ký tự" autocomplete="new-password">
+
+                                <button type="button" class="password-toggle" data-target="register-password">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+
+                            </div>
+
+                            <small id="register-password-error" class="field-error"></small>
+
+                        </div>
+
+
+                        <!-- Confirm Password -->
+                        <div class="form-group">
+
+                            <label for="register-confirm-password">
+                                Xác nhận mật khẩu
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="bi bi-lock-fill"></i>
+
+                                <input type="password" id="register-confirm-password" class="form-control account-input"
+                                    placeholder="Nhập lại mật khẩu" autocomplete="new-password">
+
+                                <button type="button" class="password-toggle" data-target="register-confirm-password">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+
+                            </div>
+
+                            <small id="register-confirm-password-error" class="field-error"></small>
+
+                        </div>
+
+
+                        <!-- Terms -->
+                        <div class="terms-group">
+
+                            <input type="checkbox" id="register-terms">
+
+                            <label for="register-terms">
+                                I agree with
+                                <a href="#" onclick="return false;">
+                                    Terms and Conditions
+                                </a>
+                            </label>
+
+                        </div>
+
+                        <small id="register-terms-error" class="field-error"></small>
+
+
+                        <!-- Register Message -->
+                        <p id="register-message" class="account-message"></p>
+
+
+                        <!-- Register Button -->
+                        <button type="submit" id="register-btn" class="account-btn primary-btn">
+                            <span class="btn-text">
+                                Tạo tài khoản
+                            </span>
+
+                            <span class="btn-loading d-none">
+                                <span class="spinner-border spinner-border-sm"></span>
+
+                                Đang đăng ký...
+                            </span>
+                        </button>
+
+                    </form>
+
+
+                    <!-- Login Switch -->
+                    <div class="switch-account">
+
+                        <span>Đã có tài khoản?</span>
+
+                        <button type="button" class="switch-btn" data-target-section="login-section">
+                            Đăng nhập
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                 ACCOUNT INFORMATION
+            ========================== -->
+                <div id="profile-section" class="account-section d-none">
+
+                    <div class="profile-top">
+
+                        <div class="profile-avatar">
+
+                            <span id="profile-avatar-text">
+                                U
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <h2 id="profile-welcome">
+                                Xin chào!
+                            </h2>
+
+                            <p>
+                                Đây là thông tin tài khoản của bạn.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Profile Card -->
+                    <div class="profile-card">
+
+                        <!-- Username -->
+                        <div class="profile-item">
+
+                            <div class="profile-item-icon">
+                                <i class="bi bi-person"></i>
+                            </div>
+
+                            <div class="profile-item-content">
+
+                                <span class="profile-label">
+                                    Username
+                                </span>
+
+                                <strong id="profile-username">
+                                    -
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Email -->
+                        <div class="profile-item">
+
+                            <div class="profile-item-icon">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+
+                            <div class="profile-item-content">
+
+                                <span class="profile-label">
+                                    Email
+                                </span>
+
+                                <strong id="profile-email">
+                                    -
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Phone -->
+                        <div class="profile-item">
+
+                            <div class="profile-item-icon">
+                                <i class="bi bi-telephone"></i>
+                            </div>
+
+                            <div class="profile-item-content">
+
+                                <span class="profile-label">
+                                    Số điện thoại
+                                </span>
+
+                                <strong id="profile-phone">
+                                    -
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- DOB -->
+                        <div class="profile-item">
+
+                            <div class="profile-item-icon">
+                                <i class="bi bi-calendar-heart"></i>
+                            </div>
+
+                            <div class="profile-item-content">
+
+                                <span class="profile-label">
+                                    Ngày sinh
+                                </span>
+
+                                <strong id="profile-dob">
+                                    -
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Last Login -->
+                        <div class="profile-item">
+
+                            <div class="profile-item-icon">
+                                <i class="bi bi-clock-history"></i>
+                            </div>
+
+                            <div class="profile-item-content">
+
+                                <span class="profile-label">
+                                    Lần đăng nhập gần nhất
+                                </span>
+
+                                <strong id="profile-last-login">
+                                    -
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Profile Actions -->
+                    <div class="profile-actions">
+
+                        <button type="button" id="logout-btn" class="account-btn logout-btn">
+                            <i class="bi bi-box-arrow-right"></i>
+                            Đăng xuất
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
 
     <!-- ===================== FOOTER ===================== -->
     <footer class="footer">

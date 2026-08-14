@@ -1,0 +1,1194 @@
+/* =========================================================
+   ACCOUNT PAGE
+========================================================= */
+
+.account-main {
+    min-height: calc(100vh - 140px);
+    padding: 50px 20px;
+    background:
+        linear-gradient(
+            135deg,
+            #fff7f2 0%,
+            #ffffff 50%,
+            #fff2eb 100%
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.account-container {
+    width: 100%;
+    max-width: 1100px;
+    min-height: 650px;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+
+    background: var(--account-card-bg, #ffffff);
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.12);
+
+    transition:
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+
+    animation: accountContainerShow 0.7s ease;
+}
+
+@keyframes accountContainerShow {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   LEFT BRAND
+========================================================= */
+
+.account-brand {
+    position: relative;
+
+    padding: 55px 45px;
+
+    display: flex;
+    align-items: center;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ee4d2d 0%,
+            #f4512c 50%,
+            #ff733d 100%
+        );
+
+    overflow: hidden;
+}
+
+
+/* Decorative circles */
+
+.account-brand::before,
+.account-brand::after {
+    content: "";
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    pointer-events: none;
+}
+
+.account-brand::before {
+    width: 280px;
+    height: 280px;
+
+    top: -100px;
+    right: -100px;
+}
+
+.account-brand::after {
+    width: 220px;
+    height: 220px;
+
+    bottom: -100px;
+    left: -90px;
+}
+
+
+.brand-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+}
+
+
+/* Icon */
+
+.brand-icon {
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.16);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    backdrop-filter: blur(10px);
+
+    font-size: 38px;
+
+    animation: brandIconFloat 3s ease-in-out infinite;
+}
+
+@keyframes brandIconFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+.brand-content h1 {
+    margin-bottom: 15px;
+
+    font-size: 42px;
+    font-weight: 800;
+
+    letter-spacing: -1px;
+}
+
+
+.brand-content > p {
+    max-width: 390px;
+
+    margin-bottom: 35px;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    line-height: 1.7;
+
+    font-size: 15px;
+}
+
+
+/* Features */
+
+.brand-features {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.brand-feature {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.brand-feature:hover {
+    transform: translateX(7px);
+}
+
+.brand-feature i {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.16);
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   ACCOUNT PANEL
+========================================================= */
+
+.account-panel {
+    padding: 45px 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--account-card-bg, #ffffff);
+}
+
+
+.account-section {
+    width: 100%;
+    max-width: 450px;
+
+    animation: sectionShow 0.35s ease;
+}
+
+@keyframes sectionShow {
+
+    from {
+        opacity: 0;
+        transform: translateX(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.account-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.account-header-icon {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    color: #ee4d2d;
+
+    background: rgba(238, 77, 45, 0.1);
+
+    font-size: 23px;
+}
+
+.account-header h2 {
+    margin: 0 0 4px;
+
+    color: var(--account-title, #222222);
+
+    font-size: 27px;
+    font-weight: 750;
+}
+
+.account-header p {
+    margin: 0;
+
+    color: var(--account-muted, #777777);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--account-label, #333333);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper > i {
+    position: absolute;
+
+    left: 15px;
+    top: 50%;
+
+    z-index: 2;
+
+    transform: translateY(-50%);
+
+    color: #999999;
+
+    transition: color 0.25s ease;
+}
+
+
+.account-input {
+    min-height: 46px;
+
+    padding-left: 43px;
+    padding-right: 45px;
+
+    border: 1px solid var(--account-input-border, #dddddd);
+
+    border-radius: 10px;
+
+    background: var(--account-input-bg, #ffffff);
+
+    color: var(--account-input-text, #222222);
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        transform 0.2s ease;
+}
+
+
+.account-input::placeholder {
+    color: #999999;
+}
+
+
+.account-input:focus {
+    border-color: #ee4d2d;
+
+    background: var(--account-input-bg, #ffffff);
+
+    color: var(--account-input-text, #222222);
+
+    box-shadow:
+        0 0 0 3px rgba(238, 77, 45, 0.12);
+
+    outline: none;
+}
+
+
+.input-wrapper:focus-within > i {
+    color: #ee4d2d;
+}
+
+
+/* Password */
+
+.password-toggle {
+    position: absolute;
+
+    right: 10px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    color: #888888;
+
+    border-radius: 50%;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.password-toggle:hover {
+    background: rgba(238, 77, 45, 0.08);
+    color: #ee4d2d;
+}
+
+
+/* Error */
+
+.field-error {
+    display: block;
+
+    min-height: 16px;
+
+    margin-top: 4px;
+
+    color: #dc3545;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   TERMS
+========================================================= */
+
+.terms-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+
+    margin-top: 5px;
+
+    font-size: 12px;
+}
+
+.terms-group input {
+    width: 16px;
+    height: 16px;
+
+    margin-top: 1px;
+
+    accent-color: #ee4d2d;
+
+    cursor: pointer;
+}
+
+.terms-group label {
+    color: var(--account-muted, #666666);
+
+    line-height: 1.5;
+
+    cursor: pointer;
+}
+
+.terms-group a {
+    color: #ee4d2d;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.terms-group a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.account-message {
+    min-height: 22px;
+
+    margin: 5px 0 12px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+.account-message.success {
+    color: #198754;
+}
+
+.account-message.error {
+    color: #dc3545;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.account-btn {
+    width: 100%;
+
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.primary-btn {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ee4d2d,
+            #f65a38
+        );
+}
+
+.primary-btn:hover {
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(238, 77, 45, 0.3);
+}
+
+.primary-btn:active {
+    transform: translateY(0);
+}
+
+
+.account-btn:disabled {
+    opacity: 0.7;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.account-divider {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    margin: 23px 0;
+
+    color: var(--account-muted, #999999);
+
+    font-size: 11px;
+}
+
+.account-divider::before,
+.account-divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: var(--account-divider, #eeeeee);
+}
+
+.account-divider span {
+    padding: 0 12px;
+}
+
+
+/* =========================================================
+   GOOGLE BUTTON
+========================================================= */
+
+.google-btn {
+    width: 100%;
+    min-height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border: 1px solid var(--account-input-border, #dddddd);
+
+    border-radius: 10px;
+
+    background: var(--account-input-bg, #ffffff);
+
+    color: var(--account-title, #333333);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.2s ease,
+        box-shadow 0.25s ease;
+}
+
+.google-btn i {
+    font-size: 17px;
+}
+
+.google-btn:hover {
+    border-color: #ee4d2d;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   SWITCH
+========================================================= */
+
+.switch-account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    margin-top: 25px;
+
+    color: var(--account-muted, #777777);
+
+    font-size: 13px;
+}
+
+.switch-btn {
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #ee4d2d;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.switch-btn:hover {
+    color: #d63d21;
+
+    transform: translateX(2px);
+}
+
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.profile-top {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    margin-bottom: 30px;
+}
+
+
+.profile-avatar {
+    width: 68px;
+    height: 68px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ee4d2d,
+            #ff7a50
+        );
+
+    font-size: 27px;
+    font-weight: 800;
+
+    box-shadow:
+        0 7px 20px rgba(238, 77, 45, 0.25);
+}
+
+
+.profile-top h2 {
+    margin: 0 0 5px;
+
+    color: var(--account-title, #222222);
+
+    font-size: 24px;
+    font-weight: 750;
+}
+
+.profile-top p {
+    margin: 0;
+
+    color: var(--account-muted, #777777);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   PROFILE CARD
+========================================================= */
+
+.profile-card {
+    padding: 5px 18px;
+
+    border: 1px solid var(--account-profile-border, #eeeeee);
+
+    border-radius: 15px;
+
+    background: var(--account-profile-bg, #ffffff);
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+
+.profile-item {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid var(--account-divider, #eeeeee);
+
+    transition:
+        transform 0.2s ease;
+}
+
+.profile-item:last-child {
+    border-bottom: none;
+}
+
+.profile-item:hover {
+    transform: translateX(4px);
+}
+
+
+.profile-item-icon {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    color: #ee4d2d;
+
+    background: rgba(238, 77, 45, 0.09);
+}
+
+
+.profile-item-content {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.profile-label {
+    color: var(--account-muted, #888888);
+
+    font-size: 11px;
+}
+
+.profile-item strong {
+    overflow: hidden;
+
+    color: var(--account-title, #333333);
+
+    font-size: 13px;
+
+    font-weight: 650;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PROFILE ACTION
+========================================================= */
+
+.profile-actions {
+    margin-top: 22px;
+}
+
+
+.logout-btn {
+    color: #dc3545;
+
+    background: rgba(220, 53, 69, 0.08);
+
+    border: 1px solid rgba(220, 53, 69, 0.15);
+}
+
+.logout-btn:hover {
+    color: #ffffff;
+
+    background: #dc3545;
+
+    box-shadow:
+        0 7px 18px rgba(220, 53, 69, 0.22);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.darkmode {
+
+    --account-card-bg: #1e1e1e;
+
+    --account-title: #f5f5f5;
+
+    --account-label: #e8e8e8;
+
+    --account-muted: #b7b7b7;
+
+    --account-input-bg: #272727;
+
+    --account-input-border: #444444;
+
+    --account-input-text: #f5f5f5;
+
+    --account-divider: #3a3a3a;
+
+    --account-profile-bg: #242424;
+
+    --account-profile-border: #3d3d3d;
+
+}
+
+
+body.darkmode .account-main {
+
+    background:
+        linear-gradient(
+            135deg,
+            #111111,
+            #181818,
+            #151515
+        );
+}
+
+
+body.darkmode .account-container {
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+
+body.darkmode .account-input {
+
+    color: #f5f5f5;
+
+    background: #272727;
+}
+
+
+body.darkmode .account-input:focus {
+
+    color: #ffffff;
+
+    background: #2b2b2b;
+}
+
+
+body.darkmode .account-input::placeholder {
+
+    color: #999999;
+}
+
+
+body.darkmode .google-btn {
+
+    color: #f5f5f5;
+
+    background: #272727;
+
+    border-color: #444444;
+}
+
+
+body.darkmode .google-btn:hover {
+
+    background: #303030;
+
+    border-color: #ee4d2d;
+}
+
+
+body.darkmode .profile-card {
+
+    background: #242424;
+
+    border-color: #3d3d3d;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .account-main {
+        padding: 35px 18px;
+    }
+
+    .account-container {
+        grid-template-columns: 0.8fr 1.2fr;
+
+        min-height: 620px;
+    }
+
+    .account-brand {
+        padding: 40px 30px;
+    }
+
+    .brand-content h1 {
+        font-size: 34px;
+    }
+
+    .account-panel {
+        padding: 40px 35px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .account-main {
+        min-height: auto;
+
+        padding: 25px 12px;
+    }
+
+    .account-container {
+        display: block;
+
+        min-height: auto;
+
+        border-radius: 18px;
+    }
+
+
+    .account-brand {
+        min-height: 250px;
+
+        padding: 30px 25px;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .brand-content {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .brand-icon {
+        width: 60px;
+        height: 60px;
+
+        margin-bottom: 15px;
+
+        border-radius: 17px;
+
+        font-size: 28px;
+    }
+
+    .brand-content h1 {
+        margin-bottom: 8px;
+
+        font-size: 30px;
+    }
+
+    .brand-content > p {
+        margin-bottom: 20px;
+
+        font-size: 13px;
+    }
+
+    .brand-features {
+        display: none;
+    }
+
+
+    .account-panel {
+        padding: 32px 20px;
+    }
+
+    .account-section {
+        max-width: none;
+    }
+
+
+    .account-header {
+        margin-bottom: 25px;
+    }
+
+    .account-header h2 {
+        font-size: 23px;
+    }
+
+
+    .profile-top {
+        align-items: flex-start;
+    }
+
+    .profile-avatar {
+        width: 58px;
+        height: 58px;
+
+        font-size: 23px;
+    }
+
+    .profile-top h2 {
+        font-size: 21px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .account-main {
+        padding: 15px 8px;
+    }
+
+    .account-container {
+        border-radius: 14px;
+    }
+
+    .account-brand {
+        min-height: 220px;
+
+        padding: 25px 18px;
+    }
+
+    .account-panel {
+        padding: 27px 15px;
+    }
+
+    .account-header {
+        gap: 11px;
+    }
+
+    .account-header-icon {
+        width: 45px;
+        height: 45px;
+
+        font-size: 19px;
+    }
+
+    .account-header h2 {
+        font-size: 21px;
+    }
+
+    .profile-card {
+        padding: 5px 13px;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid #ee4d2d;
+
+    outline-offset: 2px;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}

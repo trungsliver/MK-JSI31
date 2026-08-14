@@ -135,7 +135,327 @@
     </header>
 
     <!-- ================== MAIN CONTENT ====================== -->
+    <main class="products-main">
 
+        <div class="products-container">
+
+            <!-- ==========================================
+             PAGE HEADER
+        =========================================== -->
+            <div class="products-page-header">
+
+                <div class="page-title-area">
+
+                    <div class="page-title-icon">
+                        <i class="bi bi-shop"></i>
+                    </div>
+
+                    <div>
+                        <h1>Sản phẩm</h1>
+                        <p>
+                            Khám phá những sản phẩm chất lượng với
+                            mức giá tốt nhất.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="products-count">
+
+                    <i class="bi bi-box-seam"></i>
+
+                    <span>
+                        <strong id="products-count">0</strong>
+                        sản phẩm
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==========================================
+             FILTER AREA
+        =========================================== -->
+            <section class="products-filter">
+
+                <!-- Search -->
+                <div class="search-box">
+
+                    <i class="bi bi-search"></i>
+
+                    <input type="text" id="product-search" placeholder="Tìm kiếm sản phẩm theo tên..."
+                        autocomplete="off">
+
+                    <button type="button" id="clear-search" class="clear-search" title="Xóa tìm kiếm">
+                        <i class="bi bi-x-circle"></i>
+                    </button>
+
+                </div>
+
+
+                <!-- Filter grid -->
+                <div class="filter-grid">
+
+                    <!-- Distributor -->
+                    <div class="filter-item" id="distributor-filter-wrapper">
+
+                        <label for="distributor-filter">
+                            <i class="bi bi-building"></i>
+                            Nhà phân phối
+                        </label>
+
+                        <select id="distributor-filter" class="form-select">
+                            <option value="">
+                                Tất cả nhà phân phối
+                            </option>
+                        </select>
+
+                    </div>
+
+
+                    <!-- Brand -->
+                    <div class="filter-item dynamic-filter" id="brand-filter-wrapper">
+
+                        <label for="brand-filter">
+                            <i class="bi bi-tags"></i>
+                            Brand
+                        </label>
+
+                        <select id="brand-filter" class="form-select">
+                            <option value="">
+                                Tất cả thương hiệu
+                            </option>
+                        </select>
+
+                    </div>
+
+
+                    <!-- Category -->
+                    <div class="filter-item dynamic-filter" id="category-filter-wrapper">
+
+                        <label for="category-filter">
+                            <i class="bi bi-grid"></i>
+                            Category
+                        </label>
+
+                        <select id="category-filter" class="form-select">
+                            <option value="">
+                                Tất cả danh mục
+                            </option>
+                        </select>
+
+                    </div>
+
+
+                    <!-- Sort -->
+                    <div class="filter-item">
+
+                        <label for="sort-filter">
+                            <i class="bi bi-sort-down"></i>
+                            Sắp xếp
+                        </label>
+
+                        <select id="sort-filter" class="form-select">
+
+                            <option value="default">
+                                Mặc định
+                            </option>
+
+                            <option value="price-asc">
+                                Giá: thấp → cao
+                            </option>
+
+                            <option value="price-desc">
+                                Giá: cao → thấp
+                            </option>
+
+                            <option value="discount-desc">
+                                Giảm giá nhiều nhất
+                            </option>
+
+                            <option value="stock-desc">
+                                Còn hàng nhiều
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Price filter -->
+                <div class="price-filter">
+
+                    <div class="price-filter-title">
+
+                        <i class="bi bi-cash-stack"></i>
+
+                        <span>Khoảng giá</span>
+
+                    </div>
+
+
+                    <div class="price-inputs">
+
+                        <div class="price-input-wrapper">
+
+                            <span>₫</span>
+
+                            <input type="number" id="min-price" placeholder="Giá thấp nhất" min="0">
+
+                        </div>
+
+
+                        <span class="price-separator">
+                            —
+                        </span>
+
+
+                        <div class="price-input-wrapper">
+
+                            <span>₫</span>
+
+                            <input type="number" id="max-price" placeholder="Giá cao nhất" min="0">
+
+                        </div>
+
+
+                        <button type="button" id="apply-price" class="apply-price-btn">
+                            Áp dụng
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Active filters -->
+                <div id="active-filters" class="active-filters"></div>
+
+
+                <!-- Reset -->
+                <div class="filter-bottom">
+
+                    <button type="button" id="reset-filter" class="reset-filter-btn">
+                        <i class="bi bi-arrow-counterclockwise"></i>
+                        Xóa tất cả bộ lọc
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==========================================
+             LOADING
+        =========================================== -->
+            <div id="products-loading" class="products-loading">
+
+                <div class="spinner-border" role="status"></div>
+
+                <p>
+                    Đang tải sản phẩm...
+                </p>
+
+            </div>
+
+
+            <!-- ==========================================
+             ERROR
+        =========================================== -->
+            <div id="products-error" class="products-error d-none">
+
+                <div class="error-icon">
+
+                    <i class="bi bi-exclamation-triangle"></i>
+
+                </div>
+
+                <h3>
+                    Không thể tải sản phẩm
+                </h3>
+
+                <p id="products-error-message">
+                    Đã xảy ra lỗi khi kết nối Firebase.
+                </p>
+
+                <button type="button" id="retry-products" class="retry-btn">
+                    <i class="bi bi-arrow-clockwise"></i>
+                    Thử lại
+                </button>
+
+            </div>
+
+
+            <!-- ==========================================
+             PRODUCTS
+        =========================================== -->
+            <section id="products-grid" class="products-grid"></section>
+
+
+            <!-- ==========================================
+             NO PRODUCTS
+        =========================================== -->
+            <div id="no-products" class="no-products d-none">
+
+                <div class="no-products-icon">
+
+                    <i class="bi bi-search"></i>
+
+                </div>
+
+                <h3>
+                    Không tìm thấy sản phẩm
+                </h3>
+
+                <p>
+                    Không có sản phẩm nào phù hợp với
+                    điều kiện tìm kiếm của bạn.
+                </p>
+
+                <button type="button" id="reset-no-products" class="retry-btn">
+                    Xóa bộ lọc
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ==========================================
+         CART TOAST
+    =========================================== -->
+        <div id="cart-toast" class="cart-toast">
+
+            <div class="toast-icon">
+
+                <i class="bi bi-cart-check"></i>
+
+            </div>
+
+            <div class="toast-content">
+
+                <strong>
+                    Đã thêm vào giỏ hàng
+                </strong>
+
+                <span id="cart-toast-product">
+                    Sản phẩm đã được thêm.
+                </span>
+
+            </div>
+
+            <button type="button" id="close-cart-toast" class="close-toast">
+                <i class="bi bi-x"></i>
+            </button>
+
+        </div>
+
+    </main>
+    
     <!-- ===================== FOOTER ===================== -->
     <footer class="footer">
 
