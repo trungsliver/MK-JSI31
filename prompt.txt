@@ -28,6 +28,7 @@ Yêu cầu:
 - Gửi tách riêng file HTML, CSS, JS
 - Sử dụng tone màu phù hợp với phong cách trẻ trung cảu các sàn TMĐT (màu chủ đạo giống shopee)
 - Viết đầy đủ hiệu ứng cho các thành phần trên giao diện
+- Các file gửi viết ngắn gọn, không có dòng nào không có nội dung, mỗi câu lệnh (đối với js) chỉ viết trên 1 dòng
 
 Nội dung: 
 - Header (giống trang admin):
@@ -46,6 +47,29 @@ Nội dung:
         . description: Mô tả sản phẩm
         . distributor: Đơn vị bán sản phẩm (shop phân phối)
         . amount: Số lượng
+- Footer: tự tạo nội dung phù hợp
+-----------------------------------------------------
+NHỚ CHỤP ẢNH CÂU TRÚC TRÊN FIREBASE FIRESTORE (sản phẩm & order) & FILE firebase-config.js 
+
+Xây dựng orders.html (admin) cho website kinh doanh TMĐT (giống Shopee)
+
+Yêu cầu:
+- Chỉ dùng HTML, CSS, Bootstrap, JS
+- Có responsive (PC - Tablet - mobile) 
+- Gửi tách riêng file HTML, CSS, JS
+- Sử dụng tone màu phù hợp với phong cách trẻ trung cảu các sàn TMĐT (màu chủ đạo giống shopee)
+- Viết đầy đủ hiệu ứng cho các thành phần trên giao diện
+- - Các file gửi viết ngắn gọn, không có dòng nào không có nội dung, mỗi câu lệnh (đối với js) chỉ viết trên 1 dòng
+
+Nội dung: 
+- Header (giống trang admin):
+    + Có logo (ảnh hình tròn) và tên website phía bên trái 
+    + Menu điều hướng gồm các thẻ a có thể chuyển sang các trang html khác: index, products, orders
+- Body (điều chỉnh cho phù hợp):
+    + Hiển thị banner chứa thông tin: Tổng số đơn hàng, Đơn hàng hủy
+    + Hiển thị toàn bộ đơn hàng từ Firebase Firestore theo hàng ngang
+    + Có thanh tìm kiếm sản phẩm theo user, thời gian, tổng tiền
+    + Có chức năng đổi trạng thái đơn hàng (Pending, Confirmed, Shipping, Returning, Delivered, Canceled) và lưu vào Firebase Firestore
 - Footer: tự tạo nội dung phù hợp
 
 ======================================= USER =========================================
