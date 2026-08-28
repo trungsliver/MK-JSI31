@@ -135,6 +135,23 @@
     </header>
 
     <!-- ================== MAIN CONTENT ====================== -->
+    <main class="orders-main">
+        <div class="container orders-container">
+            <div class="orders-heading">
+                <div><p><i class="bi bi-bag-check-fill"></i> SHOPNOW PURCHASES</p><h1>Đơn mua của tôi</h1><span>Theo dõi và quản lý các đơn hàng của bạn</span></div>
+                <button class="orders-refresh" id="orders-refresh" type="button"><i class="bi bi-arrow-clockwise"></i> Làm mới</button>
+            </div>
+            <div class="orders-filter" id="orders-filter">
+                <button class="active" type="button" data-status="all">Tất cả <span id="count-all">0</span></button>
+                <button type="button" data-status="Pending">Chờ xác nhận <span id="count-pending">0</span></button>
+                <button type="button" data-status="Cancelled">Đã hủy <span id="count-cancelled">0</span></button>
+                <button type="button" data-status="other">Khác <span id="count-other">0</span></button>
+            </div>
+            <div id="orders-message" class="orders-message d-none" role="alert"></div>
+            <section id="orders-list" class="orders-list" aria-live="polite"><div class="orders-loading"><span class="spinner-border"></span><p>Đang tải đơn hàng của bạn...</p></div></section>
+        </div>
+        <div class="modal fade" id="cancel-order-modal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content cancel-modal"><div class="modal-body text-center"><div class="cancel-modal-icon"><i class="bi bi-exclamation-lg"></i></div><h2>Hủy đơn hàng?</h2><p>Đơn hàng sẽ được chuyển sang trạng thái đã hủy và không thể khôi phục.</p><div class="cancel-modal-actions"><button type="button" class="btn-keep" data-bs-dismiss="modal">Giữ đơn hàng</button><button type="button" class="btn-cancel-order" id="confirm-cancel-order">Xác nhận hủy</button></div></div></div></div></div>
+    </main>
 
     <!-- ===================== FOOTER ===================== -->
     <footer class="footer">

@@ -1,0 +1,10 @@
+const videoBtn=document.querySelector('#videoBtn');
+const serviceModal=document.querySelector('#serviceModal');
+const modalClose=document.querySelector('#modalClose');
+const toggleModal=show=>{serviceModal.classList.toggle('show',show);serviceModal.setAttribute('aria-hidden',String(!show));document.body.style.overflow=show?'hidden':'';};
+videoBtn?.addEventListener('click',()=>toggleModal(true));
+modalClose?.addEventListener('click',()=>toggleModal(false));
+serviceModal?.addEventListener('click',event=>{if(event.target===serviceModal)toggleModal(false);});
+document.addEventListener('keydown',event=>{if(event.key==='Escape')toggleModal(false);});
+const counterObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(!entry.isIntersecting)return;const counter=entry.target;const target=Number(counter.dataset.count);const suffix=target===150?'+':target===320?'K+':target===96?'%':'/7';let value=0;const increment=Math.max(1,Math.ceil(target/45));const timer=setInterval(()=>{value=Math.min(value+increment,target);counter.textContent=value+suffix;if(value===target)clearInterval(timer);},22);counterObserver.unobserve(counter);});},{threshold:.7});
+document.querySelectorAll('[data-count]').forEach(counter=>counterObserver.observe(counter));

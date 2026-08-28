@@ -135,6 +135,43 @@
     </header>
 
     <!-- ================== MAIN CONTENT ====================== -->
+    <main class="home-main">
+        <section class="container home-container">
+            <div id="shopCarousel" class="carousel slide shop-carousel" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#shopCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Khuyến mãi 1"></button>
+                    <button type="button" data-bs-target="#shopCarousel" data-bs-slide-to="1" aria-label="Khuyến mãi 2"></button>
+                    <button type="button" data-bs-target="#shopCarousel" data-bs-slide-to="2" aria-label="Khuyến mãi 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active"><img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1600&q=85" alt="Khuyến mãi mua sắm" class="d-block w-100"><div class="carousel-caption"><span>MEGA SALE</span><h1>Deal xịn mỗi ngày</h1><p>Giảm đến 50% cho hàng ngàn sản phẩm.</p><a href="#hot-products" class="carousel-cta">Mua ngay <i class="bi bi-arrow-right"></i></a></div></div>
+                    <div class="carousel-item"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1600&q=85" alt="Ưu đãi mua sắm trực tuyến" class="d-block w-100"><div class="carousel-caption"><span>FREESHIP XTRA</span><h1>Mua sắm thật vui</h1><p>Ưu đãi vận chuyển cho đơn hàng hôm nay.</p><a href="#new-products" class="carousel-cta">Khám phá <i class="bi bi-arrow-right"></i></a></div></div>
+                    <div class="carousel-item"><img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=1600&q=85" alt="Sản phẩm công nghệ" class="d-block w-100"><div class="carousel-caption"><span>TECH WEEK</span><h1>Công nghệ trong tầm tay</h1><p>Săn giá tốt, nâng cấp trải nghiệm sống.</p><a href="#sale-products" class="carousel-cta">Xem deal <i class="bi bi-arrow-right"></i></a></div></div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#shopCarousel" data-bs-slide="prev" aria-label="Ảnh trước"><i class="bi bi-chevron-left"></i></button>
+                <button class="carousel-control-next" type="button" data-bs-target="#shopCarousel" data-bs-slide="next" aria-label="Ảnh tiếp theo"><i class="bi bi-chevron-right"></i></button>
+            </div>
+            <section class="shop-benefits" aria-label="Ưu đãi mua sắm">
+                <div><i class="bi bi-truck"></i><span>Miễn phí vận chuyển</span></div>
+                <div><i class="bi bi-shield-check"></i><span>Hàng chính hãng</span></div>
+                <div><i class="bi bi-arrow-repeat"></i><span>Đổi trả dễ dàng</span></div>
+                <div><i class="bi bi-credit-card"></i><span>Thanh toán an toàn</span></div>
+            </section>
+            <section id="hot-products" class="product-section">
+                <div class="section-heading"><div><p class="section-kicker">Được yêu thích</p><h2><i class="bi bi-fire"></i> Sản phẩm hot</h2></div><a href="products.html">Xem tất cả <i class="bi bi-arrow-right"></i></a></div>
+                <div id="hot-grid" class="product-row" aria-live="polite"></div>
+            </section>
+            <section id="new-products" class="product-section">
+                <div class="section-heading"><div><p class="section-kicker">Vừa lên kệ</p><h2><i class="bi bi-stars"></i> Sản phẩm mới</h2></div><a href="products.html">Xem tất cả <i class="bi bi-arrow-right"></i></a></div>
+                <div id="new-grid" class="product-row" aria-live="polite"></div>
+            </section>
+            <section id="sale-products" class="product-section">
+                <div class="section-heading"><div><p class="section-kicker">Giá tốt hôm nay</p><h2><i class="bi bi-tags"></i> Sản phẩm giảm giá</h2></div><a href="products.html">Xem tất cả <i class="bi bi-arrow-right"></i></a></div>
+                <div id="sale-grid" class="product-row" aria-live="polite"></div>
+            </section>
+        </section>
+        <div id="cart-toast" class="home-toast" role="status"><i class="bi bi-check-circle-fill"></i><span id="cart-toast-message">Đã thêm vào giỏ hàng</span></div>
+    </main>
 
     <!-- ===================== FOOTER ===================== -->
     <footer class="footer">
