@@ -11,6 +11,7 @@ Thứ tự thuyết trình JSI31
         + hiển thị, lọc, tìm kiếm sản phẩm (từ firestore)
         + firebase auth: đăng ký - đăng nhập - đăng xuất
         + dùng firebase firestore lưu đơn hàng
+- Link: https://www.canva.com/design/DAHTlSJmp3Y/w7c7lmEbfrKdN7P7GnWbQQ/edit
 
 3. Đình Hải: Multiplayer FFA PVP game
     - Login mechanism & guest accounts (firebase auth)
@@ -31,6 +32,7 @@ Thứ tự thuyết trình JSI31
     - Firebase Auth
     - Hiển thị, tìm kiếm, lọc sản phẩm (json)
     - Firebase Auth + cloudinary: up bài viết thú cưng
+- Link slides: https://www.canva.com/design/DAHTlWo-4qw/HVqBXNhEplv2K8qGtngL_g/edit
 
 6. Bảo Lâm: Website giày bóng rổ
     - Website admin: quản lý (thêm - sửa - xóa): sản phẩm, người dùng, đơn Hoàng
@@ -38,8 +40,10 @@ Thứ tự thuyết trình JSI31
         + hiển thị, lọc, tìm kiếm sản phẩm (từ firestore)
         + firebase auth: đăng ký - đăng nhập - đăng xuất
         + dùng firebase firestore lưu đơn hàng
+- Link Slides: https://www.canva.com/design/DAHTlejjwAg/QfVHCy19g-Ab74BZexbQ5w/edit
 
 7. Khải Hoàng: Website thời tiết
     - Lấy API ngoài 
     - Firebase Auth
     - Firebase Firestore + cloudinary: chức năng post bài viết
+- Link slide: https://www.canva.com/design/DAHTlclWGHQ/P1DKjrwiABEc-UxcxzKAJQ/edit
