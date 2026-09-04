@@ -4,6 +4,7 @@ Thứ tự thuyết trình JSI31
     - Firebase Auth: Đăng ký - đăng nhập - quản lý hồ sơ
     - Lấy API từ TMDB: hiện thông tin, xem chi tiết
     - Firebase Firestore: viết nhận xet, review, đánh giá
+https://www.canva.com/design/DAHUPN6Q6Tk/I6zgce0GPBg2InE4lNXaoA/edit
 
 2. Quang Huy: Website trang sức
     - Website admin: quản lý (thêm - sửa - xóa): sản phẩm, người dùng, đơn Hoàng
@@ -12,6 +13,7 @@ Thứ tự thuyết trình JSI31
         + firebase auth: đăng ký - đăng nhập - đăng xuất
         + dùng firebase firestore lưu đơn hàng
 - Link: https://www.canva.com/design/DAHTlSJmp3Y/w7c7lmEbfrKdN7P7GnWbQQ/edit
+https://fsfbhsefbhjs29ie92.github.io/SPCK_QUANG-HUY/users/index.html
 
 3. Đình Hải: Multiplayer FFA PVP game
     - Login mechanism & guest accounts (firebase auth)
@@ -20,6 +22,8 @@ Thứ tự thuyết trình JSI31
     - Kill players for XP / bots for items
     Will need a multiplayer server
     - 2D side-scroller physics (already done!)
+https://www.canva.com/design/DAGv6jnKISA/Ls1YrkLZbXfPub2GMIQsiA/edit
+https://green-for-success.github.io/a-POLYGON-game/
 
 4. Xuân Tú: Website TMDT (Giống shopee)
     - Website admin: quản lý (thêm - sửa - xóa): sản phẩm, người dùng, đơn Hoàng
@@ -27,6 +31,7 @@ Thứ tự thuyết trình JSI31
         + hiển thị, lọc, tìm kiếm sản phẩm (từ firestore)
         + firebase auth: đăng ký - đăng nhập - đăng xuất
         + dùng firebase firestore lưu đơn hàng
+https://www.canva.com/design/DAHUAngHZpA/zjnSXf-g5pXO-wVMClfWSQ/edit
 
 5. Minh Nhật: Website chăm sóc thú cưng
     - Firebase Auth
