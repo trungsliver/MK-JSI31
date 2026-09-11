@@ -1,0 +1,54 @@
+1. Firebase
+    1.1. Firebase Firestore
+- Công dụng: lưu trữu dữ liệu có cấu trúc
+- Phân biệt: collections (tên danh sách), documents
+- Áp dụng trong SPCK: 
+    + Thông tin người dùng (khi đăng ký)
+    + Danh sách products (Thế Chương)
+    + Danh sách orders (đơn đặt hàng)
+    + Danh sách bài viết,...
+
+    1.2. Firebase Auth
+- Công dụng: xử lý nhóm chức năng đăng ký - đăng nhập - đăng xuất
+- Các phương thức đăng ký tài khoản mà các bạn sử dụng:
+    + Email/Password
+    + Google
+- Các lỗi thường xảy ra khi sử dụng:
+    + Chưa set authorized domain
+    + Chưa set rules trong firebase firestore
+
+2. Cloudinary
+- Công dụng: lưu trữ ảnh, video
+- Mô tả: up ảnh lên cloudinary -> get link -> lưu vào firestore
+- Chỉ nhận dưới dạng body là formData
+- Cấu trúc của request/response: api, preset, body,...
+
+3. Các câu hỏi chức năng
+- Đăng ký - đăng nhập (firebase auth)
+- Có thể hỏi thêm phần sửa thông tin tài khoản:
+    + Khi đăng nhập xong -> CHuyển sang trang hiển thị thông tin
+    + Chỉnh sửa thông tin ở trang Profile -> ấn nút lưu (validate) -> lưu lại firestore
+- Validation (kiểm tra thông tin):
+    + username >= 3 ký tự
+    + sđt đúng định dạng VN (regex - regular expression): 10 số, bắt đầu bằng +84/03/05/07/08/09
+    + password (regex - regular expression): min 6 ký tự, viết hoa, viết thường, số,...
+- Khi đăng ký đăng nhập xong, tài khoản đưuọc lưu thế nào:
+    + Email/Password lưu ở Firebase Auth
+    + các thông tin khác (username, dob, gender,...) lưu ở Firestore
+    + current_user (người dùng hiện tại) lưu ở localStorage
+- Các câu hỏi về API và local Storage
+- async await (bất đồng bộ): 
+    + bắt js thực hiện chương trình theo thứ tự
+    + thường áp dụng trong các phần lấy dữ liệu 
+    + VD: phải await lấy đưuọc dữ liệu -> hiển thị ra màn hình
+    + Lưu ý: chữ await nằm ở dòng cần thực hiện trước, chữ async nằm ở trước tên hàm chứa await
+- Chức năng tìm kiếm / lọc sản phẩm:
+    + Tìm kiếm theo tên: dùng lower() phần input, so sanh với lower() data
+    + Lọc (theo giá, category, brand,...)
+- Phân trang (nếu danh sách sản phẩm dài quá thì chia thành các trang nhỏ)
+- Chatbot AI: chatbase, dùng file josn (file chứa data sản phẩm để train cho AI trả lời theo đúng sản phẩm có trên web)
+- Nhóm chức năng giỏ hàng, đơn hàng:
+    + Giỏ hàng lưu ở localStorage
+    + đơn hàng lưu ở firebase firestore
+    + Nghiệp vụ sửa trạng thái / xóa đơn hàng
+- Hướng phát triển sản phẩm,...
